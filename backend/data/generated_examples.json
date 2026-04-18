@@ -1,0 +1,114 @@
+[
+  {
+    "created_at": "2026-04-16T12:16:54.242682+00:00",
+    "filename": "WhatsApp Image 2025-12-01 at 22.06.17_802657d9.jpg",
+    "style": "travel",
+    "concepts": [
+      "sky",
+      "nature",
+      "flowers",
+      "travel",
+      "mountains"
+    ],
+    "prompt": "\n\nWrite a travel-style Instagram caption.\nMake it feel like a personal moment from a trip.\nUse a friendly and natural tone.\nMake it aspirational and relatable.\nAvoid sounding too formal or descriptive.\n\n\nThe image contains the following elements: sky, nature, flowers, travel, mountains.\n\nReturn only the caption.\n",
+    "caption": "Surrounded by nothing but beauty, feeling truly alive in this breathtaking spot. There's something about being in nature that puts things into perspective #travel #naturelover #mountainhighs"
+  },
+  {
+    "created_at": "2026-04-16T12:17:42.124192+00:00",
+    "filename": "WhatsApp Image 2025-12-01 at 22.06.17_802657d9.jpg",
+    "style": "poetic",
+    "concepts": [
+      "sky",
+      "nature",
+      "flowers",
+      "travel",
+      "mountains"
+    ],
+    "prompt": "\n\nWrite a poetic Instagram caption.\nUse vivid imagery and emotional language.\nDo not describe the image literally.\nMake it feel like a short piece of poetry.\nAvoid generic phrases.\n\n\nThe image contains the following elements: sky, nature, flowers, travel, mountains.\n\nReturn only the caption.\n",
+    "caption": "Tethered to the horizon's curve,\nwhere wildflowers unfurl their secrets,\nand the mountains' ancient heartbeat\nechoes through my soul's expanse."
+  },
+  {
+    "created_at": "2026-04-16T12:18:18.993239+00:00",
+    "filename": "WhatsApp Image 2025-12-01 at 22.06.17_802657d9.jpg",
+    "style": "poetic",
+    "concepts": [
+      "sky",
+      "nature",
+      "flowers",
+      "travel",
+      "mountains"
+    ],
+    "prompt": "\n\nWrite a poetic Instagram caption.\nUse vivid imagery and emotional language.\nDo not describe the image literally.\nMake it feel like a short piece of poetry.\nAvoid generic phrases.\n\n\nThe image contains the following elements: sky, nature, flowers, travel, mountains.\n\nReturn only the caption.\n",
+    "caption": "In twilight's hush, where petals unfurl like whispered secrets, and mountains rise like ancient sentinels, I find solace in the symphony of your presence. The wind carries the sweet scent of distant horizons, beckoning me to surrender to the mystery that lies between the edges of my soul."
+  },
+  {
+    "created_at": "2026-04-16T12:23:05.196979+00:00",
+    "filename": "IMG-20251201-WA0079.jpg",
+    "style": "poetic",
+    "concepts": [
+      "mountains",
+      "snow",
+      "sky",
+      "vacation",
+      "travel"
+    ],
+    "prompt": "\n\nWrite a poetic Instagram caption.\nUse vivid imagery and emotional language.\nDo not describe the image literally.\nMake it feel like a short piece of poetry.\nAvoid generic phrases.\n\n\nThe image contains the following elements: mountains, snow, sky, vacation, travel.\n\nReturn only the caption.\n",
+    "caption": "In the silence of the wanderer's heart, \nmountains stand as sentinels of solitude. \nSnowflakes weave a tapestry of ethereal whispers,\nas the sky weeps tears of sapphire and amethyst.\nIn this fleeting haven, I lose myself,\nand find the echoes of a soul reborn."
+  },
+  {
+    "created_at": "2026-04-16T12:24:00.326940+00:00",
+    "filename": "IMG-20251201-WA0079.jpg",
+    "style": "casual",
+    "concepts": [
+      "mountains",
+      "snow",
+      "sky",
+      "vacation",
+      "travel"
+    ],
+    "prompt": "\n\nWrite a simple and casual Instagram caption.\nUse everyday language.\nKeep it relaxed and natural.\nAvoid complex or poetic expressions.\n\n\nThe image contains the following elements: mountains, snow, sky, vacation, travel.\n\nReturn only the caption.\n",
+    "caption": "Mountain vibes, snowy adventures. Loving this winter getaway!"
+  },
+  {
+    "created_at": "2026-04-16T12:30:19.458376+00:00",
+    "filename": "IMG-20251201-WA0079.jpg",
+    "style": "casual",
+    "concepts": [
+      "mountains",
+      "snow",
+      "sky",
+      "vacation",
+      "travel"
+    ],
+    "prompt": "\n\nWrite a simple and casual Instagram caption.\nUse everyday language.\nKeep it relaxed and natural.\nAvoid complex or poetic expressions.\n\n\nThe image contains the following elements: mountains, snow, sky, vacation, travel.\n\nReturn only the caption.\n",
+    "caption": "Making memories in the mountains. Loving this winter getaway so far!"
+  },
+  {
+    "created_at": "2026-04-16T12:31:06.930623+00:00",
+    "filename": "IMG-20251201-WA0079.jpg",
+    "style": "casual",
+    "concepts": [
+      "mountains",
+      "snow",
+      "sky",
+      "vacation",
+      "travel"
+    ],
+    "prompt": "\n\nWrite a simple and casual Instagram caption.\nUse everyday language.\nKeep it relaxed and natural.\nAvoid complex or poetic expressions.\n\n\nThe image contains the following elements: mountains, snow, sky, vacation, travel.\n\nReturn only the caption.\n",
+    "caption": "Celebrating winter wonderland vibes after an epic mountain getaway!"
+  },
+  {
+    "created_at": "2026-04-16T12:32:30.572885+00:00",
+    "filename": "IMG-20251201-WA0079.jpg",
+    "style": "travel",
+    "concepts": [
+      "mountains",
+      "snow",
+      "sky",
+      "vacation",
+      "travel"
+    ],
+    "prompt": "\n\nWrite a travel-style Instagram caption.\nMake it feel like a personal moment from a trip.\nUse a friendly and natural tone.\nMake it aspirational and relatable.\nAvoid sounding too formal or descriptive.\n\n\nThe image contains the following elements: mountains, snow, sky, vacation, travel.\n\nReturn only the caption.\n",
+    "caption": "Waking up to this view is my idea of perfection. There's something about being surrounded by nature that makes me feel truly alive #mountainhigh #snowdays #travelwithme"
+  }
+]
