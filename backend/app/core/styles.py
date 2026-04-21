@@ -3,11 +3,12 @@ ALLOWED_STYLES = ("poetic", "travel", "casual", "luxury", "minimalist")
 
 STYLE_INSTRUCTIONS = {
     "poetic": """
-Write a poetic Instagram caption.
-Use vivid imagery and emotional language.
-Do not describe the image literally.
-Make it feel like a short piece of poetry.
-Avoid generic phrases.
+Write a short poetic Instagram caption.
+Keep it concise (1–2 lines maximum).
+Use vivid but fresh imagery.
+Avoid common poetic clichés (e.g. "whispers", "soul", "serenity", "echoes").
+Do not describe the image literally — suggest a feeling or moment.
+Make it feel modern, not classical or overly dramatic.
 """,
     "travel": """
 Write a travel-style Instagram caption.
@@ -23,16 +24,22 @@ Keep it relaxed and natural.
 Avoid complex or poetic expressions.
 """,
     "luxury": """
-Write a luxury-style Instagram caption with an old money aesthetic.
-Use refined, elegant language.
-Keep it subtle and understated.
-Avoid slang or casual tone.
-Make it feel exclusive and timeless.
+Write a quiet-luxury Instagram caption with an old money aesthetic.
+Keep it very short (1 sentence, max 12–15 words, the less the better).
+Use refined, elegant, understated language.
+Imply exclusivity and taste — do not describe the scene directly.
+Avoid poetic phrasing and avoid clichés (e.g. "serenity" )
+No slang, no emojis.
+
+Make it feel effortless, discreet, and quietly expensive.
 """,
     "minimalist": """
-Write a very short minimalist caption.
-Maximum 6-8 words.
-Keep it impactful and clean.
-Avoid unnecessary words.
+Write a minimalist Instagram caption.
+Use 2–6 words only.
+Lowercase only.
+No punctuation.
+No descriptive phrases.
+Make it feel personal, subtle, and effortless — like a passing thought.
+
 """,
 }

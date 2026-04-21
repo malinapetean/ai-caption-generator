@@ -1,6 +1,19 @@
-venv/
+# Data folders
+data/
+data/coco/
+
+# Zips / datasets
+*.zip
+*.tar
+*.gz
+
+# Python
 __pycache__/
 *.pyc
+
+# Env
+venv/
 .env
-node_modules/
-dist/
+
+# OS
+.DS_Store
