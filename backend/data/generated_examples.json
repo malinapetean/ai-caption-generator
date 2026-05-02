@@ -712,5 +712,691 @@
     ],
     "prompt": "\n\nWrite a minimalist Instagram caption.\nUse 2–6 words only.\nLowercase only.\nNo punctuation.\nNo descriptive phrases.\nMake it feel personal, subtle, and effortless — like a passing thought.\n\n\n\nThe image contains the following elements: street, city, travel, sky, vacation.\n\nReturn only the caption.\n",
     "caption": "wandering through cities"
+  },
+  {
+    "created_at": "2026-04-21T18:06:37.443472+00:00",
+    "filename": "WhatsApp Image 2025-12-01 at 22.06.17_4165ddef.jpg",
+    "style": "poetic",
+    "concepts": [
+      "lake",
+      "vacation",
+      "nature",
+      "travel",
+      "mountains"
+    ],
+    "prompt": "\n\nWrite a short poetic Instagram caption.\nKeep it concise (1–2 lines maximum).\nUse vivid but fresh imagery.\nAvoid common poetic clichés (e.g. \"whispers\", \"soul\", \"serenity\", \"echoes\").\nDo not describe the image literally — suggest a feeling or moment.\nMake it feel modern, not classical or overly dramatic.\n\n\nThe image contains the following elements: lake, vacation, nature, travel, mountains.\n\nReturn only the caption.\n",
+    "caption": "Morning's gentle sprawl on distant shores."
+  },
+  {
+    "created_at": "2026-04-21T18:07:43.595429+00:00",
+    "filename": "WhatsApp Image 2025-12-01 at 22.06.17_4165ddef.jpg",
+    "style": "travel",
+    "concepts": [
+      "lake",
+      "vacation",
+      "nature",
+      "travel",
+      "mountains"
+    ],
+    "prompt": "\n\nWrite a travel-style Instagram caption.\nMake it feel like a personal moment from a trip.\nUse a friendly and natural tone.\nMake it aspirational and relatable.\nAvoid sounding too formal or descriptive.\n\n\nThe image contains the following elements: lake, vacation, nature, travel, mountains.\n\nReturn only the caption.\n",
+    "caption": "Sitting on the edge of this stunning lake, surrounded by towering mountains. Feeling grateful for moments like these that remind me to slow down and appreciate the beauty around me #travelwithme #naturelovers #mountainlove"
+  },
+  {
+    "created_at": "2026-04-21T18:08:45.350805+00:00",
+    "filename": "WhatsApp Image 2025-12-01 at 22.06.17_4165ddef.jpg",
+    "style": "casual",
+    "concepts": [
+      "lake",
+      "vacation",
+      "nature",
+      "travel",
+      "mountains"
+    ],
+    "prompt": "\n\nWrite a simple and casual Instagram caption.\nUse everyday language.\nKeep it relaxed and natural.\nAvoid complex or poetic expressions.\n\n\nThe image contains the following elements: lake, vacation, nature, travel, mountains.\n\nReturn only the caption.\n",
+    "caption": "Sun, mountains, and peace - what more could I ask for? Enjoying my time off by this beautiful lake #vacationmode #naturelover #traveling"
+  },
+  {
+    "created_at": "2026-04-21T18:09:39.883567+00:00",
+    "filename": "WhatsApp Image 2025-12-01 at 22.06.17_4165ddef.jpg",
+    "style": "travel",
+    "concepts": [
+      "lake",
+      "vacation",
+      "nature",
+      "travel",
+      "mountains"
+    ],
+    "prompt": "\n\nWrite a travel-style Instagram caption.\nMake it feel like a personal moment from a trip.\nUse a friendly and natural tone.\nMake it aspirational and relatable.\nAvoid sounding too formal or descriptive.\n\n\nThe image contains the following elements: lake, vacation, nature, travel, mountains.\n\nReturn only the caption.\n",
+    "caption": "Woke up to this breathtaking view and I'm already feeling grateful for this escape. The stillness of the lake, the majesty of these mountains... it's moments like these that remind me why we need a break from life"
+  },
+  {
+    "created_at": "2026-04-21T18:10:47.717432+00:00",
+    "filename": "WhatsApp Image 2025-12-01 at 22.06.17_4165ddef.jpg",
+    "style": "luxury",
+    "concepts": [
+      "lake",
+      "vacation",
+      "nature",
+      "travel",
+      "mountains"
+    ],
+    "prompt": "\n\nWrite a quiet-luxury Instagram caption with an old money aesthetic.\nKeep it very short (1 sentence, max 12–15 words, the less the better).\nUse refined, elegant, understated language.\nImply exclusivity and taste — do not describe the scene directly.\nAvoid poetic phrasing and avoid clichés (e.g. \"serenity\" )\nNo slang, no emojis.\n\nMake it feel effortless, discreet, and quietly expensive.\n\n\nThe image contains the following elements: lake, vacation, nature, travel, mountains.\n\nReturn only the caption.\n",
+    "caption": "A tranquil retreat, where nature's beauty is savored in discreet elegance."
+  },
+  {
+    "created_at": "2026-04-21T18:11:17.905202+00:00",
+    "filename": "WhatsApp Image 2025-12-01 at 22.06.17_4165ddef.jpg",
+    "style": "luxury",
+    "concepts": [
+      "lake",
+      "vacation",
+      "nature",
+      "travel",
+      "mountains"
+    ],
+    "prompt": "\n\nWrite a quiet-luxury Instagram caption with an old money aesthetic.\nKeep it very short (1 sentence, max 12–15 words, the less the better).\nUse refined, elegant, understated language.\nImply exclusivity and taste — do not describe the scene directly.\nAvoid poetic phrasing and avoid clichés (e.g. \"serenity\" )\nNo slang, no emojis.\n\nMake it feel effortless, discreet, and quietly expensive.\n\n\nThe image contains the following elements: lake, vacation, nature, travel, mountains.\n\nReturn only the caption.\n",
+    "caption": "A still morning by the lake is a rare privilege for those who know its value."
+  },
+  {
+    "created_at": "2026-04-21T18:12:05.571531+00:00",
+    "filename": "WhatsApp Image 2025-12-01 at 22.06.17_4165ddef.jpg",
+    "style": "minimalist",
+    "concepts": [
+      "lake",
+      "vacation",
+      "nature",
+      "travel",
+      "mountains"
+    ],
+    "prompt": "\n\nWrite a minimalist Instagram caption.\nUse 2–6 words only.\nLowercase only.\nNo punctuation.\nNo descriptive phrases.\nMake it feel personal, subtle, and effortless — like a passing thought.\n\n\n\nThe image contains the following elements: lake, vacation, nature, travel, mountains.\n\nReturn only the caption.\n",
+    "caption": "quiet moments by the lake"
+  },
+  {
+    "created_at": "2026-04-21T18:12:56.357394+00:00",
+    "filename": "WhatsApp Image 2025-12-01 at 22.06.17_4165ddef.jpg",
+    "style": "minimalist",
+    "concepts": [
+      "lake",
+      "vacation",
+      "nature",
+      "travel",
+      "mountains"
+    ],
+    "prompt": "\n\nWrite a minimalist Instagram caption.\nUse 2–6 words only.\nLowercase only.\nNo punctuation.\nNo descriptive phrases.\nMake it feel personal, subtle, and effortless — like a passing thought.\n\n\n\nThe image contains the following elements: lake, vacation, nature, travel, mountains.\n\nReturn only the caption.\n",
+    "caption": "quiet moments by myself"
+  },
+  {
+    "created_at": "2026-04-21T18:13:09.698637+00:00",
+    "filename": "WhatsApp Image 2025-12-01 at 22.06.17_4165ddef.jpg",
+    "style": "minimalist",
+    "concepts": [
+      "lake",
+      "vacation",
+      "nature",
+      "travel",
+      "mountains"
+    ],
+    "prompt": "\n\nWrite a minimalist Instagram caption.\nUse 2–6 words only.\nLowercase only.\nNo punctuation.\nNo descriptive phrases.\nMake it feel personal, subtle, and effortless — like a passing thought.\n\n\n\nThe image contains the following elements: lake, vacation, nature, travel, mountains.\n\nReturn only the caption.\n",
+    "caption": "a quiet morning by the lake"
+  },
+  {
+    "created_at": "2026-04-21T18:13:37.388087+00:00",
+    "filename": "WhatsApp Image 2025-12-01 at 22.06.17_4165ddef.jpg",
+    "style": "minimalist",
+    "concepts": [
+      "lake",
+      "vacation",
+      "nature",
+      "travel",
+      "mountains"
+    ],
+    "prompt": "\n\nWrite a minimalist Instagram caption.\nUse 2–6 words only.\nLowercase only.\nNo punctuation.\nNo descriptive phrases.\nMake it feel personal, subtle, and effortless — like a passing thought.\n\n\n\nThe image contains the following elements: lake, vacation, nature, travel, mountains.\n\nReturn only the caption.\n",
+    "caption": "quiet moments by the lake"
+  },
+  {
+    "created_at": "2026-04-21T18:14:00.398857+00:00",
+    "filename": "WhatsApp Image 2026-04-21 at 20.57.17.3jpeg.jpeg",
+    "style": "minimalist",
+    "concepts": [
+      "street",
+      "building",
+      "city",
+      "travel",
+      "sky"
+    ],
+    "prompt": "\n\nWrite a minimalist Instagram caption.\nUse 2–6 words only.\nLowercase only.\nNo punctuation.\nNo descriptive phrases.\nMake it feel personal, subtle, and effortless — like a passing thought.\n\n\n\nThe image contains the following elements: street, building, city, travel, sky.\n\nReturn only the caption.\n",
+    "caption": "lost in the cityscape"
+  },
+  {
+    "created_at": "2026-04-21T18:14:49.675207+00:00",
+    "filename": "WhatsApp Image 2026-04-21 at 20.57.17.3jpeg.jpeg",
+    "style": "minimalist",
+    "concepts": [
+      "street",
+      "building",
+      "city",
+      "travel",
+      "sky"
+    ],
+    "prompt": "\n\nWrite a minimalist Instagram caption.\nUse 2–6 words only.\nLowercase only.\nNo punctuation.\nNo descriptive phrases.\nMake it feel personal, subtle, and effortless — like a passing thought.\n\n\n\nThe image contains the following elements: street, building, city, travel, sky.\n\nReturn only the caption.\n",
+    "caption": "a moment in between"
+  },
+  {
+    "created_at": "2026-04-21T18:15:28.763366+00:00",
+    "filename": "WhatsApp Image 2026-04-21 at 20.57.17.3jpeg.jpeg",
+    "style": "luxury",
+    "concepts": [
+      "street",
+      "building",
+      "city",
+      "travel",
+      "sky"
+    ],
+    "prompt": "\n\nWrite a quiet-luxury Instagram caption with an old money aesthetic.\nKeep it very short (1 sentence, max 12–15 words, the less the better).\nUse refined, elegant, understated language.\nImply exclusivity and taste — do not describe the scene directly.\nAvoid poetic phrasing and avoid clichés (e.g. \"serenity\" )\nNo slang, no emojis.\n\nMake it feel effortless, discreet, and quietly expensive.\n\n\nThe image contains the following elements: street, building, city, travel, sky.\n\nReturn only the caption.\n",
+    "caption": "A solitary figure pauses amidst urban grandeur, unremarkable yet perfectly at home."
+  },
+  {
+    "created_at": "2026-04-21T18:16:07.125443+00:00",
+    "filename": "WhatsApp Image 2026-04-21 at 20.57.17.3jpeg.jpeg",
+    "style": "casual",
+    "concepts": [
+      "street",
+      "building",
+      "city",
+      "travel",
+      "sky"
+    ],
+    "prompt": "\n\nWrite a simple and casual Instagram caption.\nUse everyday language.\nKeep it relaxed and natural.\nAvoid complex or poetic expressions.\n\n\nThe image contains the following elements: street, building, city, travel, sky.\n\nReturn only the caption.\n",
+    "caption": "Strolling through the city, taking in the sights."
+  },
+  {
+    "created_at": "2026-04-21T18:18:48.069714+00:00",
+    "filename": "WhatsApp Image 2026-04-21 at 20.57.17.3jpeg.jpeg",
+    "style": "travel",
+    "concepts": [
+      "street",
+      "building",
+      "city",
+      "travel",
+      "sky"
+    ],
+    "prompt": "\n\nWrite a travel-style Instagram caption.\nMake it feel like a personal moment from a trip.\nUse a friendly and natural tone.\nMake it aspirational and relatable.\nAvoid sounding too formal or descriptive.\n\n\nThe image contains the following elements: street, building, city, travel, sky.\n\nReturn only the caption.\n",
+    "caption": "Lost in the beauty of this new place. Watching the world wake up from my favorite rooftop spot #citylove #travelinglife #wanderlust"
+  },
+  {
+    "created_at": "2026-04-21T18:19:28.990321+00:00",
+    "filename": "WhatsApp Image 2026-04-21 at 20.57.17.3jpeg.jpeg",
+    "style": "travel",
+    "concepts": [
+      "street",
+      "building",
+      "city",
+      "travel",
+      "sky"
+    ],
+    "prompt": "\n\nWrite a travel-style Instagram caption.\nMake it feel like a personal moment from a trip.\nUse a friendly and natural tone.\nMake it aspirational and relatable.\nAvoid sounding too formal or descriptive.\n\n\nThe image contains the following elements: street, building, city, travel, sky.\n\nReturn only the caption.\n",
+    "caption": "Sitting on the edge of another city, watching the day come alive. It's moments like these that remind me why I love to wander - there's always something new to discover."
+  },
+  {
+    "created_at": "2026-04-21T18:19:59.850838+00:00",
+    "filename": "WhatsApp Image 2026-04-21 at 20.57.17.3jpeg.jpeg",
+    "style": "travel",
+    "concepts": [
+      "street",
+      "building",
+      "city",
+      "travel",
+      "sky"
+    ],
+    "prompt": "\n\nWrite a travel-style Instagram caption.\nMake it feel like a personal moment from a trip.\nUse a friendly and natural tone.\nMake it aspirational and relatable.\nAvoid sounding too formal or descriptive.\n\n\nThe image contains the following elements: street, building, city, travel, sky.\n\nReturn only the caption.\n",
+    "caption": "Lost in the rhythm of this city, finding my own beat #wanderlust #urbanadventures"
+  },
+  {
+    "created_at": "2026-04-21T18:20:45.174721+00:00",
+    "filename": "WhatsApp Image 2026-04-21 at 20.57.17.3jpeg.jpeg",
+    "style": "poetic",
+    "concepts": [
+      "street",
+      "building",
+      "city",
+      "travel",
+      "sky"
+    ],
+    "prompt": "\n\nWrite a short poetic Instagram caption.\nKeep it concise (1–2 lines maximum).\nUse vivid but fresh imagery.\nAvoid common poetic clichés (e.g. \"whispers\", \"soul\", \"serenity\", \"echoes\").\nDo not describe the image literally — suggest a feeling or moment.\nMake it feel modern, not classical or overly dramatic.\n\n\nThe image contains the following elements: street, building, city, travel, sky.\n\nReturn only the caption.\n",
+    "caption": "City streets weave past the horizon's curve."
+  },
+  {
+    "created_at": "2026-04-21T18:21:06.037565+00:00",
+    "filename": "WhatsApp Image 2026-04-21 at 20.57.17.3jpeg.jpeg",
+    "style": "poetic",
+    "concepts": [
+      "street",
+      "building",
+      "city",
+      "travel",
+      "sky"
+    ],
+    "prompt": "\n\nWrite a short poetic Instagram caption.\nKeep it concise (1–2 lines maximum).\nUse vivid but fresh imagery.\nAvoid common poetic clichés (e.g. \"whispers\", \"soul\", \"serenity\", \"echoes\").\nDo not describe the image literally — suggest a feeling or moment.\nMake it feel modern, not classical or overly dramatic.\n\n\nThe image contains the following elements: street, building, city, travel, sky.\n\nReturn only the caption.\n",
+    "caption": "City edges soften in the haze of departure."
+  },
+  {
+    "created_at": "2026-04-21T18:21:28.964729+00:00",
+    "filename": "WhatsApp Image 2026-04-21 at 20.57.17.3jpeg.jpeg",
+    "style": "poetic",
+    "concepts": [
+      "street",
+      "building",
+      "city",
+      "travel",
+      "sky"
+    ],
+    "prompt": "\n\nWrite a short poetic Instagram caption.\nKeep it concise (1–2 lines maximum).\nUse vivid but fresh imagery.\nAvoid common poetic clichés (e.g. \"whispers\", \"soul\", \"serenity\", \"echoes\").\nDo not describe the image literally — suggest a feeling or moment.\nMake it feel modern, not classical or overly dramatic.\n\n\nThe image contains the following elements: street, building, city, travel, sky.\n\nReturn only the caption.\n",
+    "caption": "City streets worn smooth by strangers' feet."
+  },
+  {
+    "created_at": "2026-04-21T18:22:06.900268+00:00",
+    "filename": "WhatsApp Image 2025-12-01 at 22.06.17_a9c2f61b.jpg",
+    "style": "poetic",
+    "concepts": [
+      "forest",
+      "nature",
+      "mountains",
+      "travel",
+      "lake"
+    ],
+    "prompt": "\n\nWrite a short poetic Instagram caption.\nKeep it concise (1–2 lines maximum).\nUse vivid but fresh imagery.\nAvoid common poetic clichés (e.g. \"whispers\", \"soul\", \"serenity\", \"echoes\").\nDo not describe the image literally — suggest a feeling or moment.\nMake it feel modern, not classical or overly dramatic.\n\n\nThe image contains the following elements: forest, nature, mountains, travel, lake.\n\nReturn only the caption.\n",
+    "caption": "Terra cotta twilight on mountain's edge"
+  },
+  {
+    "created_at": "2026-04-21T18:22:27.494936+00:00",
+    "filename": "WhatsApp Image 2025-12-01 at 22.06.17_a9c2f61b.jpg",
+    "style": "poetic",
+    "concepts": [
+      "forest",
+      "nature",
+      "mountains",
+      "travel",
+      "lake"
+    ],
+    "prompt": "\n\nWrite a short poetic Instagram caption.\nKeep it concise (1–2 lines maximum).\nUse vivid but fresh imagery.\nAvoid common poetic clichés (e.g. \"whispers\", \"soul\", \"serenity\", \"echoes\").\nDo not describe the image literally — suggest a feeling or moment.\nMake it feel modern, not classical or overly dramatic.\n\n\nThe image contains the following elements: forest, nature, mountains, travel, lake.\n\nReturn only the caption.\n",
+    "caption": "Mid-morning on worn paths, where mountain air mingles with forest scent."
+  },
+  {
+    "created_at": "2026-04-21T18:23:08.428942+00:00",
+    "filename": "WhatsApp Image 2025-12-01 at 22.06.17_a9c2f61b.jpg",
+    "style": "travel",
+    "concepts": [
+      "forest",
+      "nature",
+      "mountains",
+      "travel",
+      "lake"
+    ],
+    "prompt": "\n\nWrite a travel-style Instagram caption.\nMake it feel like a personal moment from a trip.\nUse a friendly and natural tone.\nMake it aspirational and relatable.\nAvoid sounding too formal or descriptive.\n\n\nThe image contains the following elements: forest, nature, mountains, travel, lake.\n\nReturn only the caption.\n",
+    "caption": "Standing on the edge of a serene lake, surrounded by towering mountains and the tranquility of the forest. Feeling so lucky to be exactly where I am right now."
+  },
+  {
+    "created_at": "2026-04-21T18:23:31.226769+00:00",
+    "filename": "WhatsApp Image 2025-12-01 at 22.06.17_a9c2f61b.jpg",
+    "style": "travel",
+    "concepts": [
+      "forest",
+      "nature",
+      "mountains",
+      "travel",
+      "lake"
+    ],
+    "prompt": "\n\nWrite a travel-style Instagram caption.\nMake it feel like a personal moment from a trip.\nUse a friendly and natural tone.\nMake it aspirational and relatable.\nAvoid sounding too formal or descriptive.\n\n\nThe image contains the following elements: forest, nature, mountains, travel, lake.\n\nReturn only the caption.\n",
+    "caption": "Getting lost in these mountains has been exactly what I needed. Found a little slice of peace surrounded by trees, water, and endless views. Feeling grateful for this trip and all its adventures #travel #naturelover #getaway"
+  },
+  {
+    "created_at": "2026-04-21T18:24:18.213216+00:00",
+    "filename": "WhatsApp Image 2025-12-01 at 22.06.17_a9c2f61b.jpg",
+    "style": "casual",
+    "concepts": [
+      "forest",
+      "nature",
+      "mountains",
+      "travel",
+      "lake"
+    ],
+    "prompt": "\n\nWrite a simple and casual Instagram caption.\nUse everyday language.\nKeep it relaxed and natural.\nAvoid complex or poetic expressions.\n\n\nThe image contains the following elements: forest, nature, mountains, travel, lake.\n\nReturn only the caption.\n",
+    "caption": "Exploring new trails and taking in the breathtaking views. Nothing beats being surrounded by nature."
+  },
+  {
+    "created_at": "2026-04-21T18:24:41.230884+00:00",
+    "filename": "WhatsApp Image 2025-12-01 at 22.06.17_a9c2f61b.jpg",
+    "style": "casual",
+    "concepts": [
+      "forest",
+      "nature",
+      "mountains",
+      "travel",
+      "lake"
+    ],
+    "prompt": "\n\nWrite a simple and casual Instagram caption.\nUse everyday language.\nKeep it relaxed and natural.\nAvoid complex or poetic expressions.\n\n\nThe image contains the following elements: forest, nature, mountains, travel, lake.\n\nReturn only the caption.\n",
+    "caption": "Wandering through these beautiful woods feels like exactly where I'm meant to be"
+  },
+  {
+    "created_at": "2026-04-21T18:25:38.117896+00:00",
+    "filename": "WhatsApp Image 2025-12-01 at 22.06.17_a9c2f61b.jpg",
+    "style": "luxury",
+    "concepts": [
+      "forest",
+      "nature",
+      "mountains",
+      "travel",
+      "lake"
+    ],
+    "prompt": "\n\nWrite a quiet-luxury Instagram caption with an old money aesthetic.\nKeep it very short (1 sentence, max 12–15 words, the less the better).\nUse refined, elegant, understated language.\nImply exclusivity and taste — do not describe the scene directly.\nAvoid poetic phrasing and avoid clichés (e.g. \"serenity\" )\nNo slang, no emojis.\n\nMake it feel effortless, discreet, and quietly expensive.\n\n\nThe image contains the following elements: forest, nature, mountains, travel, lake.\n\nReturn only the caption.\n",
+    "caption": "Tempting solitude in the wilderness, where refinement meets untamed beauty."
+  },
+  {
+    "created_at": "2026-04-21T18:27:05.267075+00:00",
+    "filename": "WhatsApp Image 2025-12-01 at 22.06.17_a9c2f61b.jpg",
+    "style": "minimalist",
+    "concepts": [
+      "forest",
+      "nature",
+      "mountains",
+      "travel",
+      "lake"
+    ],
+    "prompt": "\n\nWrite a minimalist Instagram caption.\nUse 2–6 words only.\nLowercase only.\nNo punctuation.\nNo descriptive phrases.\nMake it feel personal, subtle, and effortless — like a passing thought.\n\n\n\nThe image contains the following elements: forest, nature, mountains, travel, lake.\n\nReturn only the caption.\n",
+    "caption": "silent mornings by myself"
+  },
+  {
+    "created_at": "2026-04-21T18:27:25.692708+00:00",
+    "filename": "WhatsApp Image 2025-12-01 at 22.06.17_a9c2f61b.jpg",
+    "style": "minimalist",
+    "concepts": [
+      "forest",
+      "nature",
+      "mountains",
+      "travel",
+      "lake"
+    ],
+    "prompt": "\n\nWrite a minimalist Instagram caption.\nUse 2–6 words only.\nLowercase only.\nNo punctuation.\nNo descriptive phrases.\nMake it feel personal, subtle, and effortless — like a passing thought.\n\n\n\nThe image contains the following elements: forest, nature, mountains, travel, lake.\n\nReturn only the caption.\n",
+    "caption": "quiet moments in nature"
+  },
+  {
+    "created_at": "2026-04-21T18:27:39.439341+00:00",
+    "filename": "WhatsApp Image 2025-12-01 at 22.06.17_a9c2f61b.jpg",
+    "style": "minimalist",
+    "concepts": [
+      "forest",
+      "nature",
+      "mountains",
+      "travel",
+      "lake"
+    ],
+    "prompt": "\n\nWrite a minimalist Instagram caption.\nUse 2–6 words only.\nLowercase only.\nNo punctuation.\nNo descriptive phrases.\nMake it feel personal, subtle, and effortless — like a passing thought.\n\n\n\nThe image contains the following elements: forest, nature, mountains, travel, lake.\n\nReturn only the caption.\n",
+    "caption": "travelling with my soul"
+  },
+  {
+    "created_at": "2026-04-21T18:28:02.412599+00:00",
+    "filename": "WhatsApp Image 2025-12-01 at 22.06.17_a9c2f61b.jpg",
+    "style": "minimalist",
+    "concepts": [
+      "forest",
+      "nature",
+      "mountains",
+      "travel",
+      "lake"
+    ],
+    "prompt": "\n\nWrite a minimalist Instagram caption.\nUse 2–6 words only.\nLowercase only.\nNo punctuation.\nNo descriptive phrases.\nMake it feel personal, subtle, and effortless — like a passing thought.\n\n\n\nThe image contains the following elements: forest, nature, mountains, travel, lake.\n\nReturn only the caption.\n",
+    "caption": "i'm home now"
+  },
+  {
+    "created_at": "2026-04-21T18:28:40.503925+00:00",
+    "filename": "WhatsApp Image 2026-04-21 at 20.57.17.jpeg",
+    "style": "minimalist",
+    "concepts": [
+      "city",
+      "night",
+      "lake",
+      "sky",
+      "travel"
+    ],
+    "prompt": "\n\nWrite a minimalist Instagram caption.\nUse 2–6 words only.\nLowercase only.\nNo punctuation.\nNo descriptive phrases.\nMake it feel personal, subtle, and effortless — like a passing thought.\n\n\n\nThe image contains the following elements: city, night, lake, sky, travel.\n\nReturn only the caption.\n",
+    "caption": "i love these nights"
+  },
+  {
+    "created_at": "2026-04-21T18:29:28.773123+00:00",
+    "filename": "WhatsApp Image 2026-04-21 at 20.57.17.jpeg",
+    "style": "luxury",
+    "concepts": [
+      "city",
+      "night",
+      "lake",
+      "sky",
+      "travel"
+    ],
+    "prompt": "\n\nWrite a quiet-luxury Instagram caption with an old money aesthetic.\nKeep it very short (1 sentence, max 12–15 words, the less the better).\nUse refined, elegant, understated language.\nImply exclusivity and taste — do not describe the scene directly.\nAvoid poetic phrasing and avoid clichés (e.g. \"serenity\" )\nNo slang, no emojis.\n\nMake it feel effortless, discreet, and quietly expensive.\n\n\nThe image contains the following elements: city, night, lake, sky, travel.\n\nReturn only the caption.\n",
+    "caption": "A solitary boat navigates moonlit waters, where privilege and solitude entwine."
+  },
+  {
+    "created_at": "2026-04-21T18:30:06.160405+00:00",
+    "filename": "WhatsApp Image 2026-04-21 at 20.57.17.jpeg",
+    "style": "casual",
+    "concepts": [
+      "city",
+      "night",
+      "lake",
+      "sky",
+      "travel"
+    ],
+    "prompt": "\n\nWrite a simple and casual Instagram caption.\nUse everyday language.\nKeep it relaxed and natural.\nAvoid complex or poetic expressions.\n\n\nThe image contains the following elements: city, night, lake, sky, travel.\n\nReturn only the caption.\n",
+    "caption": "Catching city vibes by the water"
+  },
+  {
+    "created_at": "2026-04-21T18:30:36.146694+00:00",
+    "filename": "WhatsApp Image 2026-04-21 at 20.57.17.jpeg",
+    "style": "casual",
+    "concepts": [
+      "city",
+      "night",
+      "lake",
+      "sky",
+      "travel"
+    ],
+    "prompt": "\n\nWrite a simple and casual Instagram caption.\nUse everyday language.\nKeep it relaxed and natural.\nAvoid complex or poetic expressions.\n\n\nThe image contains the following elements: city, night, lake, sky, travel.\n\nReturn only the caption.\n",
+    "caption": "Catching the sunset over this beautiful lake in the middle of the city. Life is full of surprises"
+  },
+  {
+    "created_at": "2026-04-21T18:31:01.418903+00:00",
+    "filename": "WhatsApp Image 2026-04-21 at 20.57.17.jpeg",
+    "style": "casual",
+    "concepts": [
+      "city",
+      "night",
+      "lake",
+      "sky",
+      "travel"
+    ],
+    "prompt": "\n\nWrite a simple and casual Instagram caption.\nUse everyday language.\nKeep it relaxed and natural.\nAvoid complex or poetic expressions.\n\n\nThe image contains the following elements: city, night, lake, sky, travel.\n\nReturn only the caption.\n",
+    "caption": "Exploring new places at night is my favorite way to experience the world"
+  },
+  {
+    "created_at": "2026-04-21T18:31:21.860761+00:00",
+    "filename": "WhatsApp Image 2026-04-21 at 20.57.17.jpeg",
+    "style": "casual",
+    "concepts": [
+      "city",
+      "night",
+      "lake",
+      "sky",
+      "travel"
+    ],
+    "prompt": "\n\nWrite a simple and casual Instagram caption.\nUse everyday language.\nKeep it relaxed and natural.\nAvoid complex or poetic expressions.\n\n\nThe image contains the following elements: city, night, lake, sky, travel.\n\nReturn only the caption.\n",
+    "caption": "Chillin' by the lake, watching the city lights reflect off the water. Life is good!"
+  },
+  {
+    "created_at": "2026-04-21T18:32:24.726951+00:00",
+    "filename": "WhatsApp Image 2026-04-21 at 20.57.17.jpeg",
+    "style": "travel",
+    "concepts": [
+      "city",
+      "night",
+      "lake",
+      "sky",
+      "travel"
+    ],
+    "prompt": "\n\nWrite a travel-style Instagram caption.\nMake it feel like a personal moment from a trip.\nUse a friendly and natural tone.\nMake it aspirational and relatable.\nAvoid sounding too formal or descriptive.\n\n\nThe image contains the following elements: city, night, lake, sky, travel.\n\nReturn only the caption.\n",
+    "caption": "Wandering under the stars with this one. Found myself lost in the city at night, the lake reflecting the twinkling sky above. Life is all about finding beauty in the unexpected moments"
+  },
+  {
+    "created_at": "2026-04-21T18:33:24.410760+00:00",
+    "filename": "WhatsApp Image 2026-04-21 at 20.57.17.jpeg",
+    "style": "travel",
+    "concepts": [
+      "city",
+      "night",
+      "lake",
+      "sky",
+      "travel"
+    ],
+    "prompt": "\n\nWrite a travel-style Instagram caption.\nMake it feel like a personal moment from a trip.\nUse a friendly and natural tone.\nMake it aspirational and relatable.\nAvoid sounding too formal or descriptive.\n\n\nThe image contains the following elements: city, night, lake, sky, travel.\n\nReturn only the caption.\n",
+    "caption": "Standing on the edge of this lake, watching the city lights twinkle to life beneath me. Feeling like I'm exactly where I'm meant to be, if only for a little while."
+  },
+  {
+    "created_at": "2026-04-21T18:34:10.101214+00:00",
+    "filename": "WhatsApp Image 2026-04-21 at 20.57.17.jpeg",
+    "style": "travel",
+    "concepts": [
+      "city",
+      "night",
+      "lake",
+      "sky",
+      "travel"
+    ],
+    "prompt": "\n\nWrite a travel-style Instagram caption.\nMake it feel like a personal moment from a trip.\nUse a friendly and natural tone.\nMake it aspirational and relatable.\nAvoid sounding too formal or descriptive.\n\n\nThe image contains the following elements: city, night, lake, sky, travel.\n\nReturn only the caption.\n",
+    "caption": "Standing on this tiny cliff overlooking the entire city at midnight, feeling like I'm a million miles away from home. The stars are so much brighter out here #travel #lakeview #citynight"
+  },
+  {
+    "created_at": "2026-04-21T18:35:05.407781+00:00",
+    "filename": "WhatsApp Image 2026-04-21 at 20.57.17.jpeg",
+    "style": "poetic",
+    "concepts": [
+      "city",
+      "night",
+      "lake",
+      "sky",
+      "travel"
+    ],
+    "prompt": "\n\nWrite a short poetic Instagram caption.\nKeep it concise (1–2 lines maximum).\nUse vivid but fresh imagery.\nAvoid common poetic clichés (e.g. \"whispers\", \"soul\", \"serenity\", \"echoes\").\nDo not describe the image literally — suggest a feeling or moment.\nMake it feel modern, not classical or overly dramatic.\n\n\nThe image contains the following elements: city, night, lake, sky, travel.\n\nReturn only the caption.\n",
+    "caption": "Moonlit ripples on an endless canvas."
+  },
+  {
+    "created_at": "2026-04-21T18:41:18.414138+00:00",
+    "filename": "WhatsApp Image 2026-04-21 at 21.06.31.jpeg",
+    "style": "poetic",
+    "concepts": [
+      "snow",
+      "sky",
+      "sunset",
+      "mountains",
+      "vacation"
+    ],
+    "prompt": "\n\nWrite a short poetic Instagram caption.\nKeep it concise (1–2 lines maximum).\nUse vivid but fresh imagery.\nAvoid common poetic clichés (e.g. \"whispers\", \"soul\", \"serenity\", \"echoes\").\nDo not describe the image literally — suggest a feeling or moment.\nMake it feel modern, not classical or overly dramatic.\n\n\nThe image contains the following elements: snow, sky, sunset, mountains, vacation.\n\nReturn only the caption.\n",
+    "caption": "Soft light unfurls on worn peaks."
+  },
+  {
+    "created_at": "2026-04-21T18:42:20.335278+00:00",
+    "filename": "WhatsApp Image 2026-04-21 at 21.06.31.jpeg",
+    "style": "travel",
+    "concepts": [
+      "snow",
+      "sky",
+      "sunset",
+      "mountains",
+      "vacation"
+    ],
+    "prompt": "\n\nWrite a travel-style Instagram caption.\nMake it feel like a personal moment from a trip.\nUse a friendly and natural tone.\nMake it aspirational and relatable.\nAvoid sounding too formal or descriptive.\n\n\nThe image contains the following elements: snow, sky, sunset, mountains, vacation.\n\nReturn only the caption.\n",
+    "caption": "Sunkissed and snow-globe-eyes on my favorite view #mountainvibes #sunsetchasing"
+  },
+  {
+    "created_at": "2026-04-21T18:43:07.066902+00:00",
+    "filename": "WhatsApp Image 2026-04-21 at 21.06.31.jpeg",
+    "style": "casual",
+    "concepts": [
+      "snow",
+      "sky",
+      "sunset",
+      "mountains",
+      "vacation"
+    ],
+    "prompt": "\n\nWrite a simple and casual Instagram caption.\nUse everyday language.\nKeep it relaxed and natural.\nAvoid complex or poetic expressions.\n\n\nThe image contains the following elements: snow, sky, sunset, mountains, vacation.\n\nReturn only the caption.\n",
+    "caption": "Sunset vibes on our winter vacay Nothing beats a snowy mountain view after a long day of exploring!"
+  },
+  {
+    "created_at": "2026-04-21T18:43:53.807843+00:00",
+    "filename": "WhatsApp Image 2026-04-21 at 21.06.31.jpeg",
+    "style": "casual",
+    "concepts": [
+      "snow",
+      "sky",
+      "sunset",
+      "mountains",
+      "vacation"
+    ],
+    "prompt": "\n\nWrite a simple and casual Instagram caption.\nUse everyday language.\nKeep it relaxed and natural.\nAvoid complex or poetic expressions.\n\n\nThe image contains the following elements: snow, sky, sunset, mountains, vacation.\n\nReturn only the caption.\n",
+    "caption": "Chillin' on my mountain getaway with the sun setting behind me #vacationmode #mountainlove"
+  },
+  {
+    "created_at": "2026-04-21T18:44:27.501301+00:00",
+    "filename": "WhatsApp Image 2026-04-21 at 21.06.31.jpeg",
+    "style": "casual",
+    "concepts": [
+      "snow",
+      "sky",
+      "sunset",
+      "mountains",
+      "vacation"
+    ],
+    "prompt": "\n\nWrite a simple and casual Instagram caption.\nUse everyday language.\nKeep it relaxed and natural.\nAvoid complex or poetic expressions.\n\n\nThe image contains the following elements: snow, sky, sunset, mountains, vacation.\n\nReturn only the caption.\n",
+    "caption": "Chilling with nature. Nothing beats a sunny mountain vacation #vacationmode #mountainlove #sunsetchaser"
+  },
+  {
+    "created_at": "2026-04-21T18:45:06.658041+00:00",
+    "filename": "WhatsApp Image 2026-04-21 at 21.06.31.jpeg",
+    "style": "luxury",
+    "concepts": [
+      "snow",
+      "sky",
+      "sunset",
+      "mountains",
+      "vacation"
+    ],
+    "prompt": "\n\nWrite a quiet-luxury Instagram caption with an old money aesthetic.\nKeep it very short (1 sentence, max 12–15 words, the less the better).\nUse refined, elegant, understated language.\nImply exclusivity and taste — do not describe the scene directly.\nAvoid poetic phrasing and avoid clichés (e.g. \"serenity\" )\nNo slang, no emojis.\n\nMake it feel effortless, discreet, and quietly expensive.\n\n\nThe image contains the following elements: snow, sky, sunset, mountains, vacation.\n\nReturn only the caption.\n",
+    "caption": "A discreet refuge from the world's gaze, where beauty is a subtle inheritance."
+  },
+  {
+    "created_at": "2026-04-21T18:45:30.993183+00:00",
+    "filename": "WhatsApp Image 2026-04-21 at 21.06.31.jpeg",
+    "style": "luxury",
+    "concepts": [
+      "snow",
+      "sky",
+      "sunset",
+      "mountains",
+      "vacation"
+    ],
+    "prompt": "\n\nWrite a quiet-luxury Instagram caption with an old money aesthetic.\nKeep it very short (1 sentence, max 12–15 words, the less the better).\nUse refined, elegant, understated language.\nImply exclusivity and taste — do not describe the scene directly.\nAvoid poetic phrasing and avoid clichés (e.g. \"serenity\" )\nNo slang, no emojis.\n\nMake it feel effortless, discreet, and quietly expensive.\n\n\nThe image contains the following elements: snow, sky, sunset, mountains, vacation.\n\nReturn only the caption.\n",
+    "caption": "A solitary moment of refinement in winter's hush."
+  },
+  {
+    "created_at": "2026-04-21T18:46:20.395397+00:00",
+    "filename": "WhatsApp Image 2026-04-21 at 21.06.31.jpeg",
+    "style": "minimalist",
+    "concepts": [
+      "snow",
+      "sky",
+      "sunset",
+      "mountains",
+      "vacation"
+    ],
+    "prompt": "\n\nWrite a minimalist Instagram caption.\nUse 2–6 words only.\nLowercase only.\nNo punctuation.\nNo descriptive phrases.\nMake it feel personal, subtle, and effortless — like a passing thought.\n\n\n\nThe image contains the following elements: snow, sky, sunset, mountains, vacation.\n\nReturn only the caption.\n",
+    "caption": "calm on the mountain tops"
   }
 ]

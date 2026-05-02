@@ -2,6 +2,7 @@ import logging
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from app.routes.baseline import router as baseline_router
 from app.routes.caption import router as caption_router
 from app.routes.evaluation import router as evaluation_router
 
@@ -25,6 +26,7 @@ app.add_middleware(
 )
 
 app.include_router(caption_router, prefix="/api")
+app.include_router(baseline_router, prefix="/api")
 app.include_router(evaluation_router, prefix="/api")
 
 @app.get("/")

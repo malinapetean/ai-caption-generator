@@ -9,6 +9,10 @@ class CaptionResponse(BaseModel):
     caption: str
 
 
+class BaselineResponse(BaseModel):
+    caption: str
+
+
 class LLMHealthResponse(BaseModel):
     provider: str
     ok: bool
