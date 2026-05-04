@@ -53,6 +53,11 @@ public class CaptionService {
             String style,
             Integer requestedCount
     ) {
+        System.out.println("ENTERED CaptionService.generateCaptions");
+        System.out.println("imageId = " + imageId);
+        System.out.println("style = " + style);
+        System.out.println("requestedCount = " + requestedCount);
+
         boolean hasImageFile = imageFile != null && !imageFile.isEmpty();
         boolean hasImageId = imageId != null;
 

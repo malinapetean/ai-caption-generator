@@ -11,6 +11,7 @@ import java.util.Set;
 import com.example.app.config.FastApiProperties;
 import com.example.app.dto.caption.FastApiCaptionResponse;
 import com.example.app.exception.ExternalServiceException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.core.io.ByteArrayResource;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -53,12 +54,7 @@ public class FastApiClientService {
                 prompt = response.prompt();
             }
 
-            List<String> responseCaptions = new ArrayList<>();
-            if (response.captions() != null && !response.captions().isEmpty()) {
-                responseCaptions.addAll(response.captions());
-            } else if (response.caption() != null && !response.caption().isBlank()) {
-                responseCaptions.add(response.caption());
-            }
+            List<String> responseCaptions = response.safeCaptions();
 
             responseCaptions.stream()
                     .map(String::trim)
@@ -78,6 +74,7 @@ public class FastApiClientService {
     }
 
     private FastApiCaptionResponse callFastApi(Path imagePath, String style) {
+
         byte[] imageBytes;
         try {
             imageBytes = Files.readAllBytes(imagePath);
@@ -99,15 +96,19 @@ public class FastApiClientService {
         body.add("image", imageResource);
         body.add("style", style);
 
-        HttpEntity<MultiValueMap<String, Object>> requestEntity = new HttpEntity<>(body, headers);
+        HttpEntity<MultiValueMap<String, Object>> requestEntity =
+                new HttpEntity<>(body, headers);
 
         try {
-            ResponseEntity<FastApiCaptionResponse> response = restTemplate.postForEntity(
-                    fastApiProperties.getBaseUrl() + fastApiProperties.getGeneratePath(),
-                    requestEntity,
-                    FastApiCaptionResponse.class
-            );
+            ResponseEntity<FastApiCaptionResponse> response =
+                    restTemplate.postForEntity(
+                            fastApiProperties.getBaseUrl() + fastApiProperties.getGeneratePath(),
+                            requestEntity,
+                            FastApiCaptionResponse.class
+                    );
+
             return response.getBody();
+
         } catch (RestClientException exception) {
             throw new ExternalServiceException("Failed to call FastAPI caption service.", exception);
         }

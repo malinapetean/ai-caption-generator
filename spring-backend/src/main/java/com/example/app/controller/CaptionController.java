@@ -37,6 +37,7 @@ public class CaptionController {
             @RequestParam(value = "style", required = false) String style,
             @RequestParam(value = "count", required = false) Integer count
     ) {
+        System.out.println("ENTERED CaptionController.generate");
         return captionService.generateCaptions(user, image, imageId, style, count);
     }
 
