@@ -1,164 +1,216 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
+import { Navigate, Outlet, Route, Routes } from "react-router-dom";
+import Navbar from "./components/Navbar.jsx";
+import Dashboard from "./pages/Dashboard.jsx";
+import History from "./pages/History.jsx";
+import Login from "./pages/Login.jsx";
+import Register from "./pages/Register.jsx";
+import {
+  clearAuth,
+  getProfile,
+  getStoredUser,
+  getToken,
+  persistUser,
+} from "./services/api.js";
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://127.0.0.1:8000";
-const STYLES = ["poetic", "travel", "casual", "luxury", "minimalist"];
+function LoadingScreen() {
+  return (
+    <div className="flex min-h-screen items-center justify-center px-6">
+      <div className="w-full max-w-sm rounded-[2rem] border border-white/60 bg-white/80 p-8 text-center shadow-[0_30px_120px_rgba(28,25,23,0.12)] backdrop-blur">
+        <div className="mx-auto mb-4 h-12 w-12 animate-spin rounded-full border-4 border-stone-200 border-t-stone-900" />
+        <p className="font-medium text-stone-600">Loading your workspace...</p>
+      </div>
+    </div>
+  );
+}
 
-function App() {
-  const [file, setFile] = useState(null);
-  const [style, setStyle] = useState("casual");
-  const [previewUrl, setPreviewUrl] = useState("");
-  const [result, setResult] = useState(null);
-  const [health, setHealth] = useState(null);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState("");
-
-  async function checkHealth() {
-    try {
-      const response = await fetch(`${API_BASE_URL}/api/health/llm`, {
-        cache: "no-store",
-      });
-      const data = await response.json();
-      setHealth(data);
-    } catch {
-      setHealth({
-        ok: false,
-        message: "Backend is not reachable.",
-      });
-    }
+function Toast({ toast, onDismiss }) {
+  if (!toast) {
+    return null;
   }
 
-  useEffect(() => {
-    checkHealth();
-    const intervalId = window.setInterval(() => {
-      checkHealth();
-    }, 10000);
+  const tone = {
+    success: "border-emerald-200 bg-emerald-50 text-emerald-900",
+    error: "border-rose-200 bg-rose-50 text-rose-900",
+    info: "border-sky-200 bg-sky-50 text-sky-900",
+  }[toast.type || "info"];
 
-    return () => window.clearInterval(intervalId);
-  }, []);
+  return (
+    <div className="pointer-events-none fixed inset-x-0 top-5 z-50 flex justify-center px-4">
+      <div
+        className={`pointer-events-auto flex max-w-xl items-center justify-between gap-4 rounded-2xl border px-4 py-3 shadow-lg backdrop-blur ${tone}`}
+      >
+        <p className="text-sm font-semibold">{toast.message}</p>
+        <button
+          type="button"
+          onClick={onDismiss}
+          className="shrink-0 rounded-full border border-current/20 px-2 py-1 text-xs font-bold uppercase tracking-[0.24em]"
+        >
+          Close
+        </button>
+      </div>
+    </div>
+  );
+}
 
-  useEffect(() => {
-    if (!file) {
-      setPreviewUrl("");
-      return;
-    }
+function PublicRoute({ ready, isAuthenticated, children }) {
+  if (!ready) {
+    return <LoadingScreen />;
+  }
 
-    const url = URL.createObjectURL(file);
-    setPreviewUrl(url);
-    return () => URL.revokeObjectURL(url);
-  }, [file]);
+  if (isAuthenticated) {
+    return <Navigate to="/" replace />;
+  }
 
-  const statusText = useMemo(() => {
-    if (!health) return "Checking LLM...";
-    return health.ok ? "LLM ready" : health.message;
-  }, [health]);
+  return children;
+}
 
-  async function handleSubmit(event) {
-    event.preventDefault();
-    setError("");
-    setResult(null);
+function ProtectedLayout({ ready, isAuthenticated, currentUser, onLogout }) {
+  if (!ready) {
+    return <LoadingScreen />;
+  }
 
-    if (!file) {
-      setError("Choose an image first.");
-      return;
-    }
-
-    const formData = new FormData();
-    formData.append("image", file);
-    formData.append("style", style);
-
-    setLoading(true);
-    try {
-      const response = await fetch(`${API_BASE_URL}/api/generate-caption`, {
-        method: "POST",
-        body: formData,
-      });
-      const data = await response.json();
-
-      if (!response.ok) {
-        throw new Error(data.detail || "Caption generation failed.");
-      }
-
-      setResult(data);
-      setHealth({
-        ok: true,
-        message: "Backend and LLM are responding.",
-        provider: "ollama",
-      });
-    } catch (err) {
-      setError(err.message);
-      checkHealth();
-    } finally {
-      setLoading(false);
-    }
+  if (!isAuthenticated) {
+    return <Navigate to="/login" replace />;
   }
 
   return (
-    <main className="app-shell">
-      <section className="workspace">
-        <form className="control-surface" onSubmit={handleSubmit}>
-          <div className="topline">
-            <span className={health?.ok ? "status ok" : "status"}>{statusText}</span>
-          </div>
+    <div className="min-h-screen">
+      <div className="mx-auto flex min-h-screen w-full max-w-7xl flex-col px-4 pb-10 pt-4 sm:px-6 lg:px-8">
+        <Navbar currentUser={currentUser} onLogout={onLogout} />
+        <main className="flex-1 pt-6">
+          <Outlet />
+        </main>
+      </div>
+    </div>
+  );
+}
 
-          <h1>Caption Generator</h1>
+function App() {
+  const [currentUser, setCurrentUser] = useState(getStoredUser());
+  const [authReady, setAuthReady] = useState(!getToken());
+  const [toast, setToast] = useState(null);
 
-          <label className="upload-zone">
-            <input
-              type="file"
-              accept="image/*"
-              onChange={(event) => setFile(event.target.files?.[0] || null)}
+  useEffect(() => {
+    const token = getToken();
+
+    if (!token) {
+      setAuthReady(true);
+      return;
+    }
+
+    let cancelled = false;
+
+    async function bootstrapUser() {
+      try {
+        const profile = await getProfile();
+        if (!cancelled) {
+          setCurrentUser(profile);
+        }
+      } catch {
+        clearAuth();
+        if (!cancelled) {
+          setCurrentUser(null);
+        }
+      } finally {
+        if (!cancelled) {
+          setAuthReady(true);
+        }
+      }
+    }
+
+    bootstrapUser();
+
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!toast) {
+      return undefined;
+    }
+
+    const timeoutId = window.setTimeout(() => {
+      setToast(null);
+    }, 3500);
+
+    return () => window.clearTimeout(timeoutId);
+  }, [toast]);
+
+  function notify(message, type = "info") {
+    setToast({ message, type });
+  }
+
+  function updateCurrentUser(nextUser) {
+    setCurrentUser((previousUser) => {
+      const resolvedUser =
+        typeof nextUser === "function" ? nextUser(previousUser) : nextUser;
+      persistUser(resolvedUser);
+      return resolvedUser;
+    });
+  }
+
+  function handleAuthSuccess(user) {
+    updateCurrentUser(user);
+  }
+
+  function handleLogout() {
+    clearAuth();
+    setCurrentUser(null);
+    notify("Signed out.", "info");
+  }
+
+  const isAuthenticated = Boolean(getToken());
+
+  return (
+    <>
+      <Routes>
+        <Route
+          path="/login"
+          element={
+            <PublicRoute ready={authReady} isAuthenticated={isAuthenticated}>
+              <Login onAuthSuccess={handleAuthSuccess} onNotify={notify} />
+            </PublicRoute>
+          }
+        />
+        <Route
+          path="/register"
+          element={
+            <PublicRoute ready={authReady} isAuthenticated={isAuthenticated}>
+              <Register onAuthSuccess={handleAuthSuccess} onNotify={notify} />
+            </PublicRoute>
+          }
+        />
+        <Route
+          element={
+            <ProtectedLayout
+              ready={authReady}
+              isAuthenticated={isAuthenticated}
+              currentUser={currentUser}
+              onLogout={handleLogout}
             />
-            {previewUrl ? (
-              <img src={previewUrl} alt="Selected upload preview" />
-            ) : (
-              <img
-                src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80"
-                alt="Landscape sample"
+          }
+        >
+          <Route
+            path="/"
+            element={
+              <Dashboard
+                currentUser={currentUser}
+                onUserChange={updateCurrentUser}
+                onNotify={notify}
               />
-            )}
-            <span>{file ? file.name : "Choose an image"}</span>
-          </label>
-
-          <div className="style-row">
-            {STYLES.map((item) => (
-              <button
-                type="button"
-                className={item === style ? "selected" : ""}
-                key={item}
-                onClick={() => setStyle(item)}
-              >
-                {item}
-              </button>
-            ))}
-          </div>
-
-          <button className="submit-button" type="submit" disabled={loading}>
-            {loading ? "Generating..." : "Generate caption"}
-          </button>
-
-          {error && <p className="error">{error}</p>}
-        </form>
-
-        <section className="result-panel" aria-live="polite">
-          {result ? (
-            <>
-              <p className="caption">{result.caption}</p>
-              <div className="concepts">
-                {result.concepts.map((concept) => (
-                  <span key={concept}>{concept}</span>
-                ))}
-              </div>
-              <details>
-                <summary>Prompt</summary>
-                <pre>{result.prompt}</pre>
-              </details>
-            </>
-          ) : (
-            <p className="empty-state">Upload an image, choose a style, and generate a caption.</p>
-          )}
-        </section>
-      </section>
-    </main>
+            }
+          />
+          <Route path="/history" element={<History currentUser={currentUser} />} />
+        </Route>
+        <Route
+          path="*"
+          element={<Navigate to={isAuthenticated ? "/" : "/login"} replace />}
+        />
+      </Routes>
+      <Toast toast={toast} onDismiss={() => setToast(null)} />
+    </>
   );
 }
 
