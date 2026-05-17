@@ -7,7 +7,7 @@ import {
   selectCaption,
 } from "../services/api.js";
 
-const STYLE_OPTIONS = ["casual", "poetic", "luxury", "minimalist"];
+const STYLE_OPTIONS = ["casual", "poetic", "travel", "luxury", "minimalist"];
 
 function DashboardImagePreview({ src, alt, fallbackLabel, className }) {
   const [hidden, setHidden] = useState(false);

@@ -30,34 +30,60 @@ function formatDate(isoString) {
   }).format(new Date(isoString));
 }
 
+function getGenerationKey(caption) {
+  return caption.generationBatchId || `legacy-${caption.imageId}-${caption.style}`;
+}
+
 function groupHistory(captions) {
-  const grouped = new Map();
+  const groupedByImage = new Map();
 
   for (const caption of captions) {
-    const currentGroup = grouped.get(caption.imageId) || {
+    const imageEntry = groupedByImage.get(caption.imageId) || {
       imageId: caption.imageId,
+      createdAt: caption.createdAt,
+      generations: new Map(),
+    };
+
+    const generationKey = getGenerationKey(caption);
+    const generationEntry = imageEntry.generations.get(generationKey) || {
+      key: generationKey,
       style: caption.style,
       createdAt: caption.createdAt,
       captions: [],
       selectedCaption: null,
     };
 
-    currentGroup.captions.push(caption);
-
     if (caption.selected) {
-      currentGroup.selectedCaption = caption;
+      generationEntry.selectedCaption = caption;
     }
 
-    if (new Date(caption.createdAt) > new Date(currentGroup.createdAt)) {
-      currentGroup.createdAt = caption.createdAt;
+    generationEntry.captions.push(caption);
+
+    if (new Date(caption.createdAt) > new Date(generationEntry.createdAt)) {
+      generationEntry.createdAt = caption.createdAt;
     }
 
-    grouped.set(caption.imageId, currentGroup);
+    if (new Date(caption.createdAt) > new Date(imageEntry.createdAt)) {
+      imageEntry.createdAt = caption.createdAt;
+    }
+
+    imageEntry.generations.set(generationKey, generationEntry);
+    groupedByImage.set(caption.imageId, imageEntry);
   }
 
-  return [...grouped.values()].sort(
-    (left, right) => new Date(right.createdAt) - new Date(left.createdAt)
-  );
+  return [...groupedByImage.values()]
+    .map((entry) => ({
+      ...entry,
+      generations: [...entry.generations.values()]
+        .map((generation) => ({
+          ...generation,
+          captions: [...generation.captions].sort(
+            (left, right) => new Date(right.createdAt) - new Date(left.createdAt)
+          ),
+        }))
+        .sort((left, right) => new Date(right.createdAt) - new Date(left.createdAt)),
+    }))
+    .sort((left, right) => new Date(right.createdAt) - new Date(left.createdAt));
 }
 
 function History({ currentUser }) {
@@ -65,6 +91,10 @@ function History({ currentUser }) {
   const [imagesById, setImagesById] = useState({});
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+  const totalGenerations = entries.reduce(
+    (count, entry) => count + entry.generations.length,
+    0
+  );
 
   useEffect(() => {
     if (!currentUser?.id) {
@@ -127,7 +157,7 @@ function History({ currentUser }) {
           <p className="text-xs uppercase tracking-[0.24em] text-stone-500">
             Stored sessions
           </p>
-          <p className="mt-1 text-lg font-semibold text-stone-900">{entries.length}</p>
+          <p className="mt-1 text-lg font-semibold text-stone-900">{totalGenerations}</p>
         </div>
       </div>
 
@@ -153,8 +183,6 @@ function History({ currentUser }) {
       ) : (
         <div className="grid gap-6">
           {entries.map((entry) => {
-            const selectedCaption =
-              entry.selectedCaption || entry.captions.find((caption) => caption.selected);
             const image = imagesById[entry.imageId];
 
             return (
@@ -181,52 +209,64 @@ function History({ currentUser }) {
                 </div>
 
                 <div>
-                  <div className="mb-4 flex flex-wrap items-center gap-3">
-                    <span className="rounded-full bg-stone-900 px-4 py-2 text-xs font-bold uppercase tracking-[0.24em] text-white">
-                      {entry.style}
-                    </span>
-                    <span className="rounded-full bg-white px-4 py-2 text-xs font-bold uppercase tracking-[0.22em] text-stone-500">
-                      {entry.captions.length} captions
-                    </span>
-                  </div>
-
-                  {selectedCaption ? (
-                    <div className="mb-5 rounded-[1.5rem] border border-amber-300 bg-amber-50 p-5">
-                      <p className="text-xs font-bold uppercase tracking-[0.24em] text-amber-700">
-                        Selected caption
-                      </p>
-                      <p className="mt-3 text-base leading-7 text-amber-950">
-                        {selectedCaption.text}
-                      </p>
-                    </div>
-                  ) : (
-                    <div className="mb-5 rounded-[1.5rem] border border-dashed border-stone-300 bg-white p-5 text-sm text-stone-500">
-                      No selected caption stored for this image yet.
-                    </div>
-                  )}
-
-                  <div className="grid gap-3">
-                    {entry.captions.map((caption) => (
-                      <div
-                        key={caption.id}
-                        className={`rounded-[1.4rem] border px-4 py-4 ${
-                          caption.selected
-                            ? "border-amber-300 bg-white"
-                            : "border-stone-200 bg-white/70"
-                        }`}
+                  <div className="grid gap-5">
+                    {entry.generations.map((generation) => (
+                      <section
+                        key={generation.key}
+                        className="rounded-[1.6rem] border border-stone-200 bg-white/80 p-4"
                       >
-                        <div className="mb-2 flex items-center justify-between gap-3">
-                          <p className="text-xs font-bold uppercase tracking-[0.22em] text-stone-400">
-                            Caption #{caption.id}
-                          </p>
-                          {caption.selected ? (
-                            <span className="rounded-full bg-amber-100 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.2em] text-amber-700">
-                              Selected
-                            </span>
-                          ) : null}
+                        <div className="mb-4 flex flex-wrap items-center gap-3">
+                          <span className="rounded-full bg-stone-900 px-4 py-2 text-xs font-bold uppercase tracking-[0.24em] text-white">
+                            {generation.style}
+                          </span>
+                          <span className="rounded-full bg-stone-100 px-4 py-2 text-xs font-bold uppercase tracking-[0.22em] text-stone-500">
+                            {generation.captions.length} captions
+                          </span>
+                          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-stone-400">
+                            Generated {formatDate(generation.createdAt)}
+                          </span>
                         </div>
-                        <p className="text-sm leading-7 text-stone-700">{caption.text}</p>
-                      </div>
+
+                        {generation.selectedCaption ? (
+                          <div className="mb-5 rounded-[1.5rem] border border-amber-300 bg-amber-50 p-5">
+                            <p className="text-xs font-bold uppercase tracking-[0.24em] text-amber-700">
+                              Selected caption
+                            </p>
+                            <p className="mt-3 text-base leading-7 text-amber-950">
+                              {generation.selectedCaption.text}
+                            </p>
+                          </div>
+                        ) : (
+                          <div className="mb-5 rounded-[1.5rem] border border-dashed border-stone-300 bg-white p-5 text-sm text-stone-500">
+                            No selected caption stored for this generation yet.
+                          </div>
+                        )}
+
+                        <div className="grid gap-3">
+                          {generation.captions.map((caption) => (
+                            <div
+                              key={caption.id}
+                              className={`rounded-[1.4rem] border px-4 py-4 ${
+                                caption.selected
+                                  ? "border-amber-300 bg-white"
+                                  : "border-stone-200 bg-white/70"
+                              }`}
+                            >
+                              <div className="mb-2 flex items-center justify-between gap-3">
+                                <p className="text-xs font-bold uppercase tracking-[0.22em] text-stone-400">
+                                  Caption #{caption.id}
+                                </p>
+                                {caption.selected ? (
+                                  <span className="rounded-full bg-amber-100 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.2em] text-amber-700">
+                                    Selected
+                                  </span>
+                                ) : null}
+                              </div>
+                              <p className="text-sm leading-7 text-stone-700">{caption.text}</p>
+                            </div>
+                          ))}
+                        </div>
+                      </section>
                     ))}
                   </div>
                 </div>

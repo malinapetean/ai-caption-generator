@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { registerUser } from "../services/api.js";
 
-const STYLE_OPTIONS = ["casual", "poetic", "luxury", "minimalist"];
+const STYLE_OPTIONS = ["casual", "poetic", "travel", "luxury", "minimalist"];
 
 const INITIAL_FORM = {
   email: "",
