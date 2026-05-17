@@ -13,4 +13,8 @@ public interface CaptionRepository extends JpaRepository<Caption, Long> {
     Optional<Caption> findByIdAndImageUserId(Long id, Long userId);
 
     List<Caption> findByImageId(Long imageId);
+
+    List<Caption> findByImageIdAndGenerationBatchId(Long imageId, String generationBatchId);
+
+    List<Caption> findByImageIdAndStyle(Long imageId, String style);
 }

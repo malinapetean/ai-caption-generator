@@ -30,6 +30,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.web.client.RestTemplate;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.hamcrest.Matchers.notNullValue;
 import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.user;
 import static org.springframework.test.web.client.match.MockRestRequestMatchers.header;
 import static org.springframework.test.web.client.match.MockRestRequestMatchers.method;
@@ -116,6 +117,7 @@ class CaptionControllerIntegrationTest {
                 .andExpect(jsonPath("$.concepts[1]").value("sunset"))
                 .andExpect(jsonPath("$.prompt").value("Write a poetic caption about a lake at sunset."))
                 .andExpect(jsonPath("$.captions.length()").value(3))
+                .andExpect(jsonPath("$.captions[0].generationBatchId", notNullValue()))
                 .andExpect(jsonPath("$.captions[0].text").value("Golden light settles softly over the lake."))
                 .andExpect(jsonPath("$.captions[1].text").value("The sunset leaves a hush on the water."))
                 .andExpect(jsonPath("$.captions[2].text").value("Evening drifts in amber across the shore."));
@@ -145,11 +147,45 @@ class CaptionControllerIntegrationTest {
         assertThat(captions)
                 .allSatisfy(caption -> {
                     assertThat(caption.getImage().getId()).isEqualTo(images.get(0).getId());
+                    assertThat(caption.getGenerationBatchId()).isNotBlank();
                     assertThat(caption.isSelected()).isFalse();
                 });
+        assertThat(captions)
+                .extracting(Caption::getGenerationBatchId)
+                .containsOnly(captions.get(0).getGenerationBatchId());
 
         AppUser refreshedUser = appUserRepository.findById(appUser.getId()).orElseThrow();
         assertThat(refreshedUser.getPreferredStyle()).isEqualTo("poetic");
+    }
+
+    @Test
+    void selectCaption_onlyUpdatesCaptionsFromSameGenerationBatch() throws Exception {
+        AppUser appUser = saveUser("casual");
+        ImageRecord imageRecord = saveImage(appUser);
+
+        Caption firstBatchSelected = saveCaption(imageRecord, "poetic", "batch-1", true, "Poetic one");
+        Caption firstBatchOther = saveCaption(imageRecord, "poetic", "batch-1", false, "Poetic two");
+        Caption secondBatchFirst = saveCaption(imageRecord, "travel", "batch-2", false, "Travel one");
+        Caption secondBatchTarget = saveCaption(imageRecord, "travel", "batch-2", false, "Travel two");
+
+        mockMvc.perform(org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post("/api/captions/select")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content("{\"captionId\":" + secondBatchTarget.getId() + "}")
+                        .with(user(appUser)))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.id").value(secondBatchTarget.getId()))
+                .andExpect(jsonPath("$.generationBatchId").value("batch-2"))
+                .andExpect(jsonPath("$.selected").value(true));
+
+        Caption refreshedFirstBatchSelected = captionRepository.findById(firstBatchSelected.getId()).orElseThrow();
+        Caption refreshedFirstBatchOther = captionRepository.findById(firstBatchOther.getId()).orElseThrow();
+        Caption refreshedSecondBatchFirst = captionRepository.findById(secondBatchFirst.getId()).orElseThrow();
+        Caption refreshedSecondBatchTarget = captionRepository.findById(secondBatchTarget.getId()).orElseThrow();
+
+        assertThat(refreshedFirstBatchSelected.isSelected()).isTrue();
+        assertThat(refreshedFirstBatchOther.isSelected()).isFalse();
+        assertThat(refreshedSecondBatchFirst.isSelected()).isFalse();
+        assertThat(refreshedSecondBatchTarget.isSelected()).isTrue();
     }
 
     @Test
@@ -172,6 +208,29 @@ class CaptionControllerIntegrationTest {
         appUser.setPasswordHash("password-hash");
         appUser.setPreferredStyle(preferredStyle);
         return appUserRepository.save(appUser);
+    }
+
+    private ImageRecord saveImage(AppUser user) {
+        ImageRecord imageRecord = new ImageRecord();
+        imageRecord.setUser(user);
+        imageRecord.setPath("user-" + user.getId() + "/existing-image.jpg");
+        return imageRecordRepository.save(imageRecord);
+    }
+
+    private Caption saveCaption(
+            ImageRecord imageRecord,
+            String style,
+            String generationBatchId,
+            boolean selected,
+            String text
+    ) {
+        Caption caption = new Caption();
+        caption.setImage(imageRecord);
+        caption.setStyle(style);
+        caption.setGenerationBatchId(generationBatchId);
+        caption.setSelected(selected);
+        caption.setText(text);
+        return captionRepository.save(caption);
     }
 
     private static Path createTempUploadDir() {

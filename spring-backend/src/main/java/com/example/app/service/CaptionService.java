@@ -3,6 +3,7 @@ package com.example.app.service;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 import com.example.app.config.FastApiProperties;
 import com.example.app.dto.caption.CaptionDto;
@@ -74,6 +75,7 @@ public class CaptionService {
         int count = requestedCount == null ? fastApiProperties.getCaptionsPerRequest() : requestedCount;
         FastApiClientService.FastApiBatchResponse batchResponse =
                 fastApiClientService.generateCaptions(imagePath, resolvedStyle, count);
+        String generationBatchId = UUID.randomUUID().toString();
 
         List<Caption> savedCaptions = new ArrayList<>();
         for (String generatedText : batchResponse.captions()) {
@@ -81,6 +83,7 @@ public class CaptionService {
             caption.setImage(imageRecord);
             caption.setText(generatedText);
             caption.setStyle(resolvedStyle);
+            caption.setGenerationBatchId(generationBatchId);
             caption.setSelected(false);
             savedCaptions.add(captionRepository.save(caption));
         }
@@ -104,7 +107,7 @@ public class CaptionService {
         Caption selectedCaption = captionRepository.findByIdAndImageUserId(captionId, user.getId())
                 .orElseThrow(() -> new ResourceNotFoundException("Caption not found."));
 
-        List<Caption> imageCaptions = captionRepository.findByImageId(selectedCaption.getImage().getId());
+        List<Caption> imageCaptions = findSelectionScopeCaptions(selectedCaption);
         imageCaptions.forEach(caption -> caption.setSelected(false));
         selectedCaption.setSelected(true);
         captionRepository.saveAll(imageCaptions);
@@ -135,8 +138,22 @@ public class CaptionService {
                 caption.getImage().getId(),
                 caption.getText(),
                 caption.getStyle(),
+                caption.getGenerationBatchId(),
                 caption.isSelected(),
                 caption.getCreatedAt()
         );
+    }
+
+    private List<Caption> findSelectionScopeCaptions(Caption selectedCaption) {
+        Long imageId = selectedCaption.getImage().getId();
+
+        if (StringUtils.hasText(selectedCaption.getGenerationBatchId())) {
+            return captionRepository.findByImageIdAndGenerationBatchId(
+                    imageId,
+                    selectedCaption.getGenerationBatchId()
+            );
+        }
+
+        return captionRepository.findByImageIdAndStyle(imageId, selectedCaption.getStyle());
     }
 }

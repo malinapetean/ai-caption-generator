@@ -33,6 +33,9 @@ public class Caption {
     @Column(nullable = false)
     private String style;
 
+    @Column(name = "generation_batch_id")
+    private String generationBatchId;
+
     @Column(nullable = false)
     private boolean selected;
 
@@ -82,6 +85,14 @@ public class Caption {
 
     public void setSelected(boolean selected) {
         this.selected = selected;
+    }
+
+    public String getGenerationBatchId() {
+        return generationBatchId;
+    }
+
+    public void setGenerationBatchId(String generationBatchId) {
+        this.generationBatchId = generationBatchId;
     }
 
     public Instant getCreatedAt() {

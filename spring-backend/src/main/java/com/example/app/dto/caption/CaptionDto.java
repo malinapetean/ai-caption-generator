@@ -7,6 +7,7 @@ public record CaptionDto(
         Long imageId,
         String text,
         String style,
+        String generationBatchId,
         boolean selected,
         Instant createdAt
 ) {
