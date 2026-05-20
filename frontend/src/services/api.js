@@ -150,6 +150,11 @@ export async function getCaptionHistory() {
   return data;
 }
 
+export async function getStats() {
+  const { data } = await api.get("/api/stats");
+  return data;
+}
+
 export function buildImageUrl(path) {
   if (!path) {
     return "";

@@ -1944,5 +1944,145 @@
     ],
     "prompt": "\n\nWrite a travel-style Instagram caption.\nMake it feel like a personal moment from a trip.\nUse a friendly and natural tone.\nMake it aspirational and relatable.\nAvoid sounding too formal or descriptive.\n\n\nThe image contains the following elements: sea, vacation, mountains, travel, nature.\n\nReturn only the caption.\n",
     "caption": "Waking up to mountains that touch the sky and a view of the ocean that makes my soul feel at peace. There's something about being in this perfect spot that reminds me why I love traveling so much - it's not just the adventure, but the stillness too."
+  },
+  {
+    "created_at": "2026-05-17T16:31:56.091437+00:00",
+    "filename": "d57ca190-e5a1-49f9-b86e-053c4c6e399a-DSC01191.JPG",
+    "style": "casual",
+    "concepts": [
+      "flowers",
+      "nature",
+      "food",
+      "portrait",
+      "travel"
+    ],
+    "prompt": "\n\nWrite a simple and casual Instagram caption.\nUse everyday language.\nKeep it relaxed and natural.\nAvoid complex or poetic expressions.\n\n\nThe image contains the following elements: flowers, nature, food, portrait, travel.\n\nReturn only the caption.\n",
+    "caption": "Chillin' with good vibes and delicious eats. Caught this gorgeous pic on my latest adventure."
+  },
+  {
+    "created_at": "2026-05-17T16:32:04.073189+00:00",
+    "filename": "d57ca190-e5a1-49f9-b86e-053c4c6e399a-DSC01191.JPG",
+    "style": "casual",
+    "concepts": [
+      "flowers",
+      "nature",
+      "food",
+      "portrait",
+      "travel"
+    ],
+    "prompt": "\n\nWrite a simple and casual Instagram caption.\nUse everyday language.\nKeep it relaxed and natural.\nAvoid complex or poetic expressions.\n\n\nThe image contains the following elements: flowers, nature, food, portrait, travel.\n\nReturn only the caption.\n",
+    "caption": "Savoring the beauty of the moment amidst stunning blooms, delicious eats, and adventures waiting to happen"
+  },
+  {
+    "created_at": "2026-05-17T16:32:13.017010+00:00",
+    "filename": "d57ca190-e5a1-49f9-b86e-053c4c6e399a-DSC01191.JPG",
+    "style": "casual",
+    "concepts": [
+      "flowers",
+      "nature",
+      "food",
+      "portrait",
+      "travel"
+    ],
+    "prompt": "\n\nWrite a simple and casual Instagram caption.\nUse everyday language.\nKeep it relaxed and natural.\nAvoid complex or poetic expressions.\n\n\nThe image contains the following elements: flowers, nature, food, portrait, travel.\n\nReturn only the caption.\n",
+    "caption": "Just back from an amazing trip and surrounded by all my favorite things - beautiful blooms, delicious eats, and good company"
+  },
+  {
+    "created_at": "2026-05-17T16:34:12.679340+00:00",
+    "filename": "19f584d9-ac4b-4284-80d0-ce5d790642b1-IMG-20251201-WA0074.jpg",
+    "style": "casual",
+    "concepts": [
+      "mountains",
+      "nature",
+      "building",
+      "sky",
+      "travel"
+    ],
+    "prompt": "\n\nWrite a simple and casual Instagram caption.\nUse everyday language.\nKeep it relaxed and natural.\nAvoid complex or poetic expressions.\n\n\nThe image contains the following elements: mountains, nature, building, sky, travel.\n\nReturn only the caption.\n",
+    "caption": "Chasing views and making memories in the great outdoors."
+  },
+  {
+    "created_at": "2026-05-17T16:34:18.889481+00:00",
+    "filename": "19f584d9-ac4b-4284-80d0-ce5d790642b1-IMG-20251201-WA0074.jpg",
+    "style": "casual",
+    "concepts": [
+      "mountains",
+      "nature",
+      "building",
+      "sky",
+      "travel"
+    ],
+    "prompt": "\n\nWrite a simple and casual Instagram caption.\nUse everyday language.\nKeep it relaxed and natural.\nAvoid complex or poetic expressions.\n\n\nThe image contains the following elements: mountains, nature, building, sky, travel.\n\nReturn only the caption.\n",
+    "caption": "Just hanging out in the mountains. Life is good."
+  },
+  {
+    "created_at": "2026-05-17T16:34:30.660687+00:00",
+    "filename": "19f584d9-ac4b-4284-80d0-ce5d790642b1-IMG-20251201-WA0074.jpg",
+    "style": "casual",
+    "concepts": [
+      "mountains",
+      "nature",
+      "building",
+      "sky",
+      "travel"
+    ],
+    "prompt": "\n\nWrite a simple and casual Instagram caption.\nUse everyday language.\nKeep it relaxed and natural.\nAvoid complex or poetic expressions.\n\n\nThe image contains the following elements: mountains, nature, building, sky, travel.\n\nReturn only the caption.\n",
+    "caption": "Chillin' in the mountains after a long day of exploring. So grateful for this moment of peace."
+  },
+  {
+    "created_at": "2026-05-20T16:39:33.053131+00:00",
+    "filename": "03475793-d8fc-4678-b7a0-77df30ab736a-WhatsApp Image 2025-12-01 at 22.06.17_0cfd8146.jpg",
+    "style": "poetic",
+    "concepts": [
+      "mountains",
+      "travel",
+      "nature",
+      "sky",
+      "vacation"
+    ],
+    "prompt": "\n\nWrite a short poetic Instagram caption.\nKeep it concise (1–2 lines maximum).\nUse vivid but fresh imagery.\nAvoid common poetic clichés (e.g. \"whispers\", \"soul\", \"serenity\", \"echoes\").\nDo not describe the image literally — suggest a feeling or moment.\nMake it feel modern, not classical or overly dramatic.\n\n\nThe image contains the following elements: mountains, travel, nature, sky, vacation.\n\nReturn only the caption.\n",
+    "caption": "Midday shadows stretch across the horizon, where rugged peaks meet infinite possibility."
+  },
+  {
+    "created_at": "2026-05-20T16:40:04.761319+00:00",
+    "filename": "03475793-d8fc-4678-b7a0-77df30ab736a-WhatsApp Image 2025-12-01 at 22.06.17_0cfd8146.jpg",
+    "style": "poetic",
+    "concepts": [
+      "mountains",
+      "travel",
+      "nature",
+      "sky",
+      "vacation"
+    ],
+    "prompt": "\n\nWrite a short poetic Instagram caption.\nKeep it concise (1–2 lines maximum).\nUse vivid but fresh imagery.\nAvoid common poetic clichés (e.g. \"whispers\", \"soul\", \"serenity\", \"echoes\").\nDo not describe the image literally — suggest a feeling or moment.\nMake it feel modern, not classical or overly dramatic.\n\n\nThe image contains the following elements: mountains, travel, nature, sky, vacation.\n\nReturn only the caption.\n",
+    "caption": "Lost in the curve of a foreign mountain range, where the horizon becomes a distant hum."
+  },
+  {
+    "created_at": "2026-05-20T16:40:16.111079+00:00",
+    "filename": "03475793-d8fc-4678-b7a0-77df30ab736a-WhatsApp Image 2025-12-01 at 22.06.17_0cfd8146.jpg",
+    "style": "poetic",
+    "concepts": [
+      "mountains",
+      "travel",
+      "nature",
+      "sky",
+      "vacation"
+    ],
+    "prompt": "\n\nWrite a short poetic Instagram caption.\nKeep it concise (1–2 lines maximum).\nUse vivid but fresh imagery.\nAvoid common poetic clichés (e.g. \"whispers\", \"soul\", \"serenity\", \"echoes\").\nDo not describe the image literally — suggest a feeling or moment.\nMake it feel modern, not classical or overly dramatic.\n\n\nThe image contains the following elements: mountains, travel, nature, sky, vacation.\n\nReturn only the caption.\n",
+    "caption": "Midnight on an uncharted peak, where the world's maps give way to endless possibility."
+  },
+  {
+    "created_at": "2026-05-20T16:40:25.291668+00:00",
+    "filename": "03475793-d8fc-4678-b7a0-77df30ab736a-WhatsApp Image 2025-12-01 at 22.06.17_0cfd8146.jpg",
+    "style": "poetic",
+    "concepts": [
+      "mountains",
+      "travel",
+      "nature",
+      "sky",
+      "vacation"
+    ],
+    "prompt": "\n\nWrite a short poetic Instagram caption.\nKeep it concise (1–2 lines maximum).\nUse vivid but fresh imagery.\nAvoid common poetic clichés (e.g. \"whispers\", \"soul\", \"serenity\", \"echoes\").\nDo not describe the image literally — suggest a feeling or moment.\nMake it feel modern, not classical or overly dramatic.\n\n\nThe image contains the following elements: mountains, travel, nature, sky, vacation.\n\nReturn only the caption.\n",
+    "caption": "Lost in the pause between horizon and home."
   }
 ]

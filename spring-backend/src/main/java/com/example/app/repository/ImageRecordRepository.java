@@ -11,4 +11,6 @@ public interface ImageRecordRepository extends JpaRepository<ImageRecord, Long> 
     List<ImageRecord> findByUserIdOrderByCreatedAtDesc(Long userId);
 
     Optional<ImageRecord> findByIdAndUserId(Long id, Long userId);
+
+    long countByUserId(Long userId);
 }

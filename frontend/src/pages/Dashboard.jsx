@@ -220,9 +220,7 @@ function Dashboard({ currentUser, onUserChange, onNotify }) {
             <div className="mb-4 flex items-center justify-between gap-3">
               <div>
                 <h2 className="text-lg font-semibold text-stone-900">Upload a new image</h2>
-                <p className="text-sm text-stone-500">
-                  New uploads are automatically saved to your library.
-                </p>
+                <p className="text-sm text-stone-500">Saved to your library.</p>
               </div>
               <span className="rounded-full bg-white px-3 py-1 text-xs font-bold uppercase tracking-[0.22em] text-stone-500">
                 Option 1
@@ -253,14 +251,12 @@ function Dashboard({ currentUser, onUserChange, onNotify }) {
 
                 <div>
                   <p className="text-sm font-semibold uppercase tracking-[0.22em] text-stone-500">
-                    Click to browse
+                    Upload
                   </p>
                   <p className="mt-2 text-lg font-semibold text-stone-900">
-                    {file ? file.name : "Drag less, click once, generate faster."}
+                    {file ? file.name : "Choose an image to get started."}
                   </p>
-                  <p className="mt-2 text-sm text-stone-500">
-                    Supported by the backend multipart upload flow.
-                  </p>
+                  <p className="mt-2 text-sm text-stone-500">JPG, PNG, and WEBP work best.</p>
                 </div>
               </div>
             </label>

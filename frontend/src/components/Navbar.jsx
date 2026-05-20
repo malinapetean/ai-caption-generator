@@ -28,6 +28,9 @@ function Navbar({ currentUser, onLogout }) {
             <NavLink to="/history" className={navClassName}>
               History
             </NavLink>
+            <NavLink to="/statistics" className={navClassName}>
+              Statistics
+            </NavLink>
           </nav>
 
           <div className="flex items-center justify-between gap-3 rounded-full border border-stone-200 bg-white px-4 py-2">

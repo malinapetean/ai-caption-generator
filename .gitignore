@@ -15,5 +15,15 @@ __pycache__/
 venv/
 .env
 
+# Spring Boot
+spring-backend/target/
+spring-backend/uploads/
+spring-backend/.m2/
+
 # OS
 .DS_Store
+
+#Frontend
+frontend/node_modules/
+frontend/dist/
+.env

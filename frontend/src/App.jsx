@@ -5,6 +5,7 @@ import Dashboard from "./pages/Dashboard.jsx";
 import History from "./pages/History.jsx";
 import Login from "./pages/Login.jsx";
 import Register from "./pages/Register.jsx";
+import Statistics from "./pages/Statistics.jsx";
 import {
   clearAuth,
   getProfile,
@@ -203,6 +204,7 @@ function App() {
             }
           />
           <Route path="/history" element={<History currentUser={currentUser} />} />
+          <Route path="/statistics" element={<Statistics />} />
         </Route>
         <Route
           path="*"
