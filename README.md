@@ -1,6 +1,6 @@
-# 📸 AI Caption Generator — Codex Instructions
+# AI Caption Generator — Codex Instructions
 
-## 🧠 Project Purpose
+## Project Purpose
 
 Build a full-stack application that:
 
@@ -12,7 +12,7 @@ Build a full-stack application that:
 
 This is a multimodal pipeline (vision + language).
 
-## ⚙️ Functional Requirements
+## Functional Requirements
 
 ### Core Flow
 
@@ -48,7 +48,7 @@ LLM connection/configuration failures return `502`.
 
 ---
 
-## 🧱 System Architecture
+## System Architecture
 
 ### Backend (FastAPI)
 - image upload
@@ -64,7 +64,7 @@ LLM connection/configuration failures return `502`.
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 backend/
 ├── app/
@@ -83,7 +83,7 @@ frontend/
 
 ---
 
-## 🔧 Backend Responsibilities
+## Backend Responsibilities
 
 ### CLIP Service
 - input: image
@@ -99,7 +99,7 @@ frontend/
 
 ---
 
-## 🧠 Prompt Engineering
+## Prompt Engineering
 
 Prompts must:
 - include detected concepts
@@ -115,7 +115,7 @@ Return only the caption.
 
 ---
 
-## 🚫 Constraints
+## Constraints
 
 - no model training
 - no database (initially)
@@ -123,7 +123,7 @@ Return only the caption.
 
 ---
 
-## 🛠️ Run Instructions
+## Run Instructions
 
 ### Backend
 

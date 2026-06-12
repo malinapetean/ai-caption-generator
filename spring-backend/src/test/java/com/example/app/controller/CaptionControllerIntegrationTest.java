@@ -32,6 +32,7 @@ import org.springframework.web.client.RestTemplate;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.Matchers.notNullValue;
 import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.user;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.client.match.MockRestRequestMatchers.header;
 import static org.springframework.test.web.client.match.MockRestRequestMatchers.method;
 import static org.springframework.test.web.client.match.MockRestRequestMatchers.requestTo;
@@ -200,6 +201,34 @@ class CaptionControllerIntegrationTest {
 
         assertThat(imageRecordRepository.findAll()).isEmpty();
         assertThat(captionRepository.findAll()).isEmpty();
+    }
+
+    @Test
+    void getHistory_returnsOnlyAuthenticatedUsersCaptionsOrderedByNewestFirst() throws Exception {
+        AppUser appUser = saveUser("casual");
+        AppUser otherUser = saveUser("travel");
+
+        ImageRecord firstImage = saveImage(appUser);
+        ImageRecord secondImage = saveImage(appUser);
+        ImageRecord otherImage = saveImage(otherUser);
+
+        Caption oldestCaption = saveCaption(firstImage, "poetic", "batch-1", false, "Oldest caption");
+        Caption newestCaption = saveCaption(secondImage, "travel", "batch-2", true, "Newest selected caption");
+        saveCaption(otherImage, "luxury", "batch-3", true, "Other user's caption");
+
+        mockMvc.perform(get("/api/captions/history").with(user(appUser)))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.length()").value(2))
+                .andExpect(jsonPath("$[0].id").value(newestCaption.getId()))
+                .andExpect(jsonPath("$[0].imageId").value(secondImage.getId()))
+                .andExpect(jsonPath("$[0].text").value("Newest selected caption"))
+                .andExpect(jsonPath("$[0].style").value("travel"))
+                .andExpect(jsonPath("$[0].selected").value(true))
+                .andExpect(jsonPath("$[1].id").value(oldestCaption.getId()))
+                .andExpect(jsonPath("$[1].imageId").value(firstImage.getId()))
+                .andExpect(jsonPath("$[1].text").value("Oldest caption"))
+                .andExpect(jsonPath("$[1].style").value("poetic"))
+                .andExpect(jsonPath("$[1].selected").value(false));
     }
 
     private AppUser saveUser(String preferredStyle) {
