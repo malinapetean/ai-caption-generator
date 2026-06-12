@@ -1,6 +1,7 @@
 package com.example.app.service;
 
 import java.io.IOException;
+import java.net.SocketTimeoutException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
@@ -11,15 +12,17 @@ import java.util.Set;
 import com.example.app.config.FastApiProperties;
 import com.example.app.dto.caption.FastApiCaptionResponse;
 import com.example.app.exception.ExternalServiceException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.core.io.ByteArrayResource;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
+import org.springframework.web.client.HttpStatusCodeException;
+import org.springframework.web.client.ResourceAccessException;
 import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
 
@@ -109,9 +112,46 @@ public class FastApiClientService {
 
             return response.getBody();
 
+        } catch (ResourceAccessException exception) {
+            throw new ExternalServiceException(describeResourceAccessException(exception), exception);
+        } catch (HttpStatusCodeException exception) {
+            throw new ExternalServiceException(describeHttpStatusException(exception), exception);
         } catch (RestClientException exception) {
             throw new ExternalServiceException("Failed to call FastAPI caption service.", exception);
         }
+    }
+
+    private String describeResourceAccessException(ResourceAccessException exception) {
+        String message = exception.getMessage();
+        Throwable rootCause = exception.getMostSpecificCause();
+
+        if (rootCause instanceof SocketTimeoutException || containsIgnoreCase(message, "timed out")) {
+            return "FastAPI caption request timed out after "
+                    + fastApiProperties.getReadTimeoutMs()
+                    + " ms. The first generation can take longer while the model warms up.";
+        }
+
+        if (containsIgnoreCase(message, "connection refused") || containsIgnoreCase(message, "failed to connect")) {
+            return "Could not connect to the FastAPI caption service.";
+        }
+
+        return "Failed to reach the FastAPI caption service.";
+    }
+
+    private String describeHttpStatusException(HttpStatusCodeException exception) {
+        String responseBody = exception.getResponseBodyAsString();
+        if (StringUtils.hasText(responseBody)) {
+            return "FastAPI caption service returned HTTP "
+                    + exception.getStatusCode().value()
+                    + ": "
+                    + responseBody;
+        }
+
+        return "FastAPI caption service returned HTTP " + exception.getStatusCode().value() + ".";
+    }
+
+    private boolean containsIgnoreCase(String message, String fragment) {
+        return message != null && message.toLowerCase().contains(fragment.toLowerCase());
     }
 
     public record FastApiBatchResponse(

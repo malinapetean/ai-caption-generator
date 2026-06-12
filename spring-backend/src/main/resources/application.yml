@@ -29,7 +29,7 @@ app:
     captions-per-request: ${FASTAPI_CAPTIONS_PER_REQUEST:3}
     default-style: ${DEFAULT_CAPTION_STYLE:casual}
     connect-timeout-ms: ${FASTAPI_CONNECT_TIMEOUT_MS:5000}
-    read-timeout-ms: ${FASTAPI_READ_TIMEOUT_MS:30000}
+    read-timeout-ms: ${FASTAPI_READ_TIMEOUT_MS:120000}
   storage:
     upload-dir: ${UPLOAD_DIR:uploads}
   cors:
