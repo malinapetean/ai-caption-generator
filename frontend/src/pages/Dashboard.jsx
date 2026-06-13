@@ -422,7 +422,6 @@ function Dashboard({ currentUser, onUserChange, onNotify }) {
                   </span>
                 ))}
               </div>
-              <p className="mt-4 text-sm leading-7 text-stone-300">{result.prompt}</p>
             </div>
 
             <div className="grid gap-4">
