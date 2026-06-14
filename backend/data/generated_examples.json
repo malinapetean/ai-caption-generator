@@ -2686,5 +2686,47 @@
     ],
     "prompt": "\n\nWrite a travel-style Instagram caption.\nMake it feel like a personal moment from a trip.\nUse a friendly and natural tone.\nMake it aspirational and relatable.\nAvoid sounding too formal or descriptive.\n\n\nThe image contains the following elements: street, city, building, travel, coffee.\n\nReturn only the caption.\n",
     "caption": "Stepping out into this crazy beautiful city with my cup of coffee as the perfect companion. Ready to soak up every moment and make the most of this adventure #traveldiaries #cityvibes #coffeebreaks"
+  },
+  {
+    "created_at": "2026-06-14T13:09:48.235872+00:00",
+    "filename": "0d66b8f2-4d66-462c-a89b-d2ff337183f4-IMG-20251201-WA0065.jpg",
+    "style": "casual",
+    "concepts": [
+      "sunset",
+      "sky",
+      "city",
+      "sea",
+      "travel"
+    ],
+    "prompt": "\n\nWrite a simple and casual Instagram caption.\nUse everyday language.\nKeep it relaxed and natural.\nAvoid complex or poetic expressions.\nSound like a spontaneous caption posted by a friend.\n\n\nThe image contains the following elements: sunset, sky, city, sea, travel.\n\nReturn only the caption.\n",
+    "caption": "Just got back from an amazing trip and this view still has me speechless. Can't wait to go again!"
+  },
+  {
+    "created_at": "2026-06-14T13:09:54.739941+00:00",
+    "filename": "0d66b8f2-4d66-462c-a89b-d2ff337183f4-IMG-20251201-WA0065.jpg",
+    "style": "casual",
+    "concepts": [
+      "sunset",
+      "sky",
+      "city",
+      "sea",
+      "travel"
+    ],
+    "prompt": "\n\nWrite a simple and casual Instagram caption.\nUse everyday language.\nKeep it relaxed and natural.\nAvoid complex or poetic expressions.\nSound like a spontaneous caption posted by a friend.\n\n\nThe image contains the following elements: sunset, sky, city, sea, travel.\n\nReturn only the caption.\n",
+    "caption": "Chasing sunsets and making memories wherever I go!"
+  },
+  {
+    "created_at": "2026-06-14T13:10:02.691362+00:00",
+    "filename": "0d66b8f2-4d66-462c-a89b-d2ff337183f4-IMG-20251201-WA0065.jpg",
+    "style": "casual",
+    "concepts": [
+      "sunset",
+      "sky",
+      "city",
+      "sea",
+      "travel"
+    ],
+    "prompt": "\n\nWrite a simple and casual Instagram caption.\nUse everyday language.\nKeep it relaxed and natural.\nAvoid complex or poetic expressions.\nSound like a spontaneous caption posted by a friend.\n\n\nThe image contains the following elements: sunset, sky, city, sea, travel.\n\nReturn only the caption.\n",
+    "caption": "Just got back from an epic trip and I'm still reeling from that stunning sunset over the ocean "
   }
 ]

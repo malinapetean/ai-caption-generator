@@ -1,4 +1,4 @@
-# AI Caption Generator — Codex Instructions
+# AI Caption Generator
 
 ## Project Purpose
 
