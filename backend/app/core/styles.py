@@ -22,6 +22,7 @@ Write a simple and casual Instagram caption.
 Use everyday language.
 Keep it relaxed and natural.
 Avoid complex or poetic expressions.
+Sound like a spontaneous caption posted by a friend.
 """,
     "luxury": """
 Write a quiet-luxury Instagram caption with an old money aesthetic.

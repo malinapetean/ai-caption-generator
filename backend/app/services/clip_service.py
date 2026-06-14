@@ -5,26 +5,9 @@ import torch
 MODEL_NAME = "openai/clip-vit-base-patch32"
 
 candidate_labels = [
-    "beach",
-    "sea",
-    "mountains",
-    "sunset",
-    "city",
-    "street",
-    "coffee",
-    "food",
-    "flowers",
-    "nature",
-    "forest",
-    "snow",
-    "travel",
-    "vacation",
-    "fashion",
-    "portrait",
-    "sky",
-    "lake",
-    "building",
-    "night"
+    "beach", "sea", "mountains", "sunset", "city", "street", "coffee",
+    "food", "flowers", "nature", "forest", "snow", "travel", "vacation",
+    "fashion", "portrait", "sky", "lake", "building", "night"
 ]
 
 class ClipService:
