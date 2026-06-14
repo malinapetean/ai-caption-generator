@@ -176,20 +176,5 @@ Override it with:
 VITE_API_BASE_URL=http://127.0.0.1:8000
 ```
 
----
 
-## 🎯 Success Criteria
 
-- upload image
-- receive concepts
-- generate prompt
-- generate caption
-- display result
-
----
-
-## 📌 Notes
-
-- keep services modular
-- do not mix logic in routes
-- focus on prompt experimentation
