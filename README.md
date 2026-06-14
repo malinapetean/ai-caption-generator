@@ -1,8 +1,7 @@
 # AI Caption Generator
 
 ## Project Purpose
-
-Build a full-stack application that:
+Full-stack application that:
 
 - takes an image as input
 - extracts semantic concepts using CLIP
@@ -101,11 +100,6 @@ frontend/
 
 ## Prompt Engineering
 
-Prompts must:
-- include detected concepts
-- enforce style
-- avoid generic descriptions
-
 Example:
 
 Write a short poetic Instagram caption.
@@ -113,15 +107,6 @@ Use vivid imagery and emotional tone.
 Concepts: mountains, sunset, lake.
 Return only the caption.
 
----
-
-## Constraints
-
-- no model training
-- no database (initially)
-- local execution
-
----
 
 ## Run Instructions
 
